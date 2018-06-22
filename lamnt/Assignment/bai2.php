@@ -1,7 +1,7 @@
 <?php 
 	$a= 1;
 	$b=2;
-	$c=3;
+
 	$d= $b*$b-(4*$a*$c);
 	if($d<0){
 		echo "Pt vo nghiem";
