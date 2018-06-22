@@ -18,7 +18,6 @@
 	#n2{
 		color: red;
 	}
-	#n0 {background-color: gray;}
 </style>
 <?php 
 function count_X ($a,$b){
