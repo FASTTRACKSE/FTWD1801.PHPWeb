@@ -171,6 +171,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<th>b</th>
 	 	<th>x</th>
 	 	<th>Ghi chú</th>
+	 	<th>Chức năng</th>
 	</tr>
     <tr>
 	 	<td>1</td>
@@ -178,6 +179,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>2.00</td>
 	 	<td><?php echo "$x"?></td>
 	 	<td><?php echo "$tr"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr id="n1">
 	 	<td>2</td>
@@ -185,6 +187,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>1.00</td>
 	 	<td>-</td>
 	 	<td><?php echo "$tr1"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr>
 	 	<td>3</td>
@@ -192,6 +195,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>-9.60</td>
 	 	<td><?php echo "$x2";?></td>
 	 	<td><?php echo "$tr2"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr>
 	 	<td>4</td>
@@ -199,6 +203,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>0.50</td>
 	 	<td><?php echo "$x3";?></td>
 	 	<td><?php echo "$tr3"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr>
 	 	<td>5</td>
@@ -206,6 +211,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>0.30</td>
 	 	<td><?php echo "$x4";?></td>
 	 	<td><?php echo "$tr4"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr>
 	 	<td>6</td>
@@ -213,6 +219,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>3.60</td>
 	 	<td><?php echo "$x5";?></td>
 	 	<td><?php echo "$tr5"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr>
 	 	<td>7</td>
@@ -220,6 +227,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>6.00</td>
 	 	<td><?php echo "$x6";?></td>
 	 	<td><?php echo "$tr6"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 	<tr>
 	 	<td>8</td>
@@ -227,6 +235,7 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	 	<td>-0.30</td>
 	 	<td><?php echo "$x7";?></td>
 	 	<td><?php echo "$tr7"?></td>
+	 	<td><a href="#" onclick="xoa(this)">Xóa</a></td>
 	</tr>
 </table>
 <i>
@@ -235,4 +244,13 @@ echo "Giải phương trình bậc nhất,1 ẩn số";
 	echo "©2017-PHP Assignment.Create By <strong>$name</strong> ";
 	?>
 </i>
+<script>
+	function xoa(ele){
+		var stt = confirm("Bạn có muốn xóa hay không");
+		if(stt){
+			var prt = ele.parentElement.parentElement;
+			prt.remove();
+		}
+	}
+</script>
 
