@@ -1,27 +1,27 @@
 <style>
-	.demo{
-		color:red;
-	}
+.demo{
+	color:red;
+}
 </style>
 <?php 
-	$stt=0;
-	if( $stt==1){
+$stt=1;
+if( $stt==1){
 	$class="demo";
-	}else{
-		$class="";
-	}
+}else{
+	$class="";
+}
 ?>
 
 <strong class="<?=$class?>" >
-<?="Xin chao"
- ?>
- <?php echo "Hello world"?>
-</strong>
+	<?="Xin chao"
+	?>
+	<?php echo "Hello world"?>
+	</strong>
 
 <?php 
-	if($stt==1){
-?>
+if($stt==1){
+	?>
 	<i>Hello</i>
-<?php
-	}
+	<?php
+}
 ?>

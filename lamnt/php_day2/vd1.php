@@ -2,12 +2,12 @@
 	$asm = array(
 
 		'giatri1'=>	array(
-				'a'=>1,
-				'b2'=>2
+				'a1'=>1,
+				'b1'=>2
 			),
 		'giatri2'=>array(
-				'a'=>3,
-				'b'=>4
+				'a2'=>3,	
+				'b2'=>4
 		),
 
 	);
@@ -19,6 +19,9 @@
 <hr>
 <?php 
 	foreach($asm as $key=>$value ){
-		echo $value['a'];
+		echo $value['a1'];
+	}
+	foreach($asm as $key=>$qưe ){
+		echo $qưe['b2'];
 	}
 ?>
