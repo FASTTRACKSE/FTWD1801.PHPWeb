@@ -24,10 +24,4 @@
 		move_uploaded_file($tmp_name,$full_part );
 	}
 ?>
-<?php 
-	function tongHaiSo($a,$b){
-		return $a+$b;
-	}
 
-	echo tongHaiSo(111,12314);
-?>

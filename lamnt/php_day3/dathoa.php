@@ -22,7 +22,7 @@
 				$_SESSION['giohoa'][$id]=$item;
 			}
 			unset($_SESSION['msg']);
-			header("location: basket.php");
+			header("location: basket.php?id=5");
 		}
 		
 	}
