@@ -1,4 +1,6 @@
-<?php
-	$name=$_POST['aname'];
-	return "Toi ten la $name";
+<?php 
+	$class=$_POST['aclass'];
+	echo "<div>
+		<h2>$class</h2>
+	</div>";
 ?>

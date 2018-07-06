@@ -1,17 +1,22 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"  ></script>
 <button onClick="clickAjax()">Gửi ajax</button>
 <input type='text' id="name"/>
-<p id="ten"></p>
+<div id="noidung">
+	<h2>Dong 1</h2>
+	<h2>Dong 2</h2>
+</div>
 <script>
 	
 	function clickAjax(){
-		var name = $("#name").value;
+		var name = $("#name").val();
+
 		$.ajax({
 			url:"getAjax.php",
 			type:"POST",
-			data:{aname:name,aclass:"1801"},
+			dataType:"html",
+			data:{ten:name,aclass:"1801"},
 			success:function(response){
-				$("#ten").text(response);
+				document.getElementById("noidung").append(""+response+"");
 				
 			},
 			error:function(jqXHR,textStatus,errorThrow){
