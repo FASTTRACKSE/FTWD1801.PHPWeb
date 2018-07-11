@@ -9,7 +9,7 @@
 	
 	function clickAjax(){
 		var name = $("#name").val();
-
+		
 		$.ajax({
 			url:"getAjax.php",
 			type:"POST",
