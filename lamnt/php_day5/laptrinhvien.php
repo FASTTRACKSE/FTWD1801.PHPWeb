@@ -1,21 +1,21 @@
 <?php 
 	require "connguoi.php";
-	class laptrinhvien extends ConNguoi{
-		var $name;
+	 class laptrinhvien extends ConNguoi{
+		static  $name;
 		var $tuoi;
 		function __construct(){
 			echo "Hello";
 		}
 		var $bangcap="";
 		var $chuyennganh="";
-		function noi(){
+		public static function noi(){
 			//echo "hello";
 			return "Lập trình viên đẹp trai";
 		}
-		function nge(){
-			echo "hello";
+		public static function nge(){
+			return self::noi();
 		}
 	}
+	echo laptrinhvien::nge();
 
-	$person = new laptrinhvien();
 ?>

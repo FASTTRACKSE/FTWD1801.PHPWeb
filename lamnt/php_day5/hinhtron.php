@@ -1,7 +1,7 @@
 <?php
-class hinhtron implements hinh{
+ static class hinhtron implements hinh{
 	var $bankinh=0;
-	function hienThi(){
+	static function hienThi(){
 		echo "Đây là hình tròn! ";
 	}
 	function dienTich(){

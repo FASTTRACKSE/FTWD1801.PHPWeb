@@ -6,7 +6,7 @@
 		function suy_nghi($noidung){
 			$this->mieng=$noidung;
 		}
-		function noi(){
+		public static function noi(){
 			return $this->mieng;
 		}
 	}
