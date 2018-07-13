@@ -71,6 +71,7 @@
 </form>
 </fieldset>
 <?php
+	if (isset($_POST['ten'])) {
 		$tendangnhap=$_POST['ten'];
 		$pass=$_POST['matkhau'];
 		$hoten=$_POST['hovaten'];
@@ -101,16 +102,20 @@
 			
 			$_SESSION['danhsachtaikhoan'][$tendangnhap] = $item;
 		};
-		if(isset($_GET['tendangnhap'])){
+		
+	};
+	if(isset($_GET['tendangnhap'])){
 		$tendangnhap=$_GET['tendangnhap'];
 		unset($_SESSION['danhsachtaikhoan'][$tendangnhap]);
 		header("location: btday4.php");
-	};
 	echo '<pre>';
 	print_r($_SESSION['danhsachtaikhoan']);
 	//print_r($_GET['ten']);
 	echo '</pre>';	
+	}
+		
 ?>
+
 <h1><strong>Danh sách tài khoản</strong></h1>
 <table>
 	<tr>
