@@ -1,0 +1,20 @@
+﻿3. 
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Hồ  Công Linh", "19", "FFSE1701", "Nam");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Trần Thu Hà", "19", "FFSE1701", "N?");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Trần Thị Tuyết Nhung", "19", "FFSE1701", "N?");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Trần Nguyên Nam", "19", "FFSE1701", "Nam");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Mai Tuyết Loan", "19", "FFSE1702", "N?");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Trương Ðại Nghia", "20", "FFSE1702", "Nam");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Phạm Quang Nhân", "21", "FFSE1702", "Nam");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Bùi Ngọc Quỳnh Nhi", "20", "FFSE1703", "N?");
+INSERT INTO sinhvien ( name, age, class, gender) VALUES ( "Nguyễn Minh Huy", "22", "FFSE1704", "Nam");
+
+4. SELECT * FROM sinhvien WHERE age > '19' AND gender = '0';
+
+5. SELECT * FROM sinhvien WHERE name LIKE '%Nam';
+
+6. SELECT COUNT(class) FROM sinhvien WHERE class = 'FFSE1701' 
+
+7. DELETE FROM sinhvien WHERE age < 19
+
+8. UPDATE sinhvien SET name = REPLACE (name,'Nam','Trung') WHERE name LIKE '%Nam%';
