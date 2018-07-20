@@ -47,7 +47,7 @@
 		if(isset($_GET['id'])){
 			$id=$_GET['id'];
 			unset($_SESSION['giohoa'][$id]);
-			header("location: shop.php");
+			header("location: asm_bt_day3.php");
 		}			
 	?>	
 	<table>
@@ -69,7 +69,7 @@
 			<td><?= $item['price'] ?></td>
 			<td><?= $item['qty'] ?></td>		
 			<td><?= $item['qty']*$item['price'] ?></td>			
-			<td><a href="shop.php?id=<?=$key?>">Xóa</a></td>
+			<td><a href="asm_bt_day3.php?id=<?=$key?>">Xóa</a></td>
 
 		</tr>				 		
 	 	<?php } ?>
