@@ -1,0 +1,10 @@
+SELECT lms_students.code,first_name,lms_countries.name AS nationality,datnuoc.name AS country,lms_vietnam.name AS province FROM `lms_students`
+INNER JOIN lms_countries
+ON lms_students.nationality=lms_countries.id
+INNEr jOIN lms_countries AS datnuoc
+ON lms_students.country=datnuoc.id
+INNER JOIN lms_vietnam
+ON lms_students.province=lms_vietnam.id
+
+ORDER BY birth_year ASC,birth_month DESC ,birth_day DESC 
+LIMIT 0,5
