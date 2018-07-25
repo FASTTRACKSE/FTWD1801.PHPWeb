@@ -1,0 +1,30 @@
+﻿3.
+	SELECT st.id AS ma_SV , st.first_name AS ten_SV,ct.name AS quoctich , n.name AS nuoc FROM lms_students AS st
+	INNER JOIN lms_countries AS ct ON st.nationality = ct.id
+	INNER JOIN lms_countries AS n ON st.country = n.id
+4.
+	SELECT st.id AS ma_SV , st.first_name AS ten_SV,ct.name AS quoctich , n.name AS nuoc , vn.name AS thanhpho FROM lms_students AS st
+	INNER JOIN lms_countries AS ct ON st.nationality = ct.id
+	INNER JOIN lms_countries AS n ON st.country = n.id
+	INNER JOIN lms_vietnam AS vn ON st.province = vn.id  
+	WHERE vn.name != 'Đà Nẵng'
+	ORDER BY `ma_SV` ASC
+5.
+	SELECT
+   	 	st.code,
+    		st.first_name,
+    		vn.name AS province,
+    		ct.name AS country ,
+    		co.name AS nationality
+	FROM lms_students AS st
+	INNER JOIN lms_vietnam AS vn 
+	ON st.province = vn.id  
+	INNER JOIN lms_countries AS ct
+	ON st.country = ct.id
+	INNER JOIN lms_countries AS co
+	ON st.nationality = co.id
+6.
+	SELECT st.id AS ma_SV , st.first_name AS ten_SV,ct.name AS quoctich , n.name AS nuoc,st.birth_day,st.birth_month,st.birth_year FROM lms_students AS st
+	INNER JOIN lms_countries AS ct ON st.nationality = ct.id
+	INNER JOIN lms_countries AS n ON st.country = n.id
+	ORDER By st.birth_year ASC,st.birth_month ASC,st.birth_day ASC
