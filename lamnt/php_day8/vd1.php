@@ -5,15 +5,13 @@
 	if($mysqli->connect_errno){
 		echo $mysqli->error;
 	}else{
-		$sql = "SELECt * FROM lms_students";
+		$sql = "SELECt first_name FROM lms_students";
 		$result = $mysqli->query($sql);
+		
 		while($item = $result->fetch_assoc()){
-?>
-		<h5><?=$item['code']?></h5>
-		<a href="read.php?id=<?=$item['id']?>">Read</a>
-		<br>
-<?php
+			
 		}
+		
 	}
 	$mysqli->close();
 ?>

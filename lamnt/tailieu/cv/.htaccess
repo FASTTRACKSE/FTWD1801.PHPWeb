@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule admin/users.html admin/users/index.php
+RewriteRule admin/users/view-([0-9]*) admin/users/view.php?id=$1
+RewriteRule admin/users/edit-([0-9]*) admin/users/edit.php?id=$1
+RewriteRule home index.php
