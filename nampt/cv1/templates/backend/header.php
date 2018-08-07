@@ -1,3 +1,19 @@
+<?php 
+  session_start();
+  if (isset($_POST['logout'])) {
+        unset($_SESSION['user']);
+        header('location:http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/login.php');
+  }
+
+  if (!isset($_SESSION['user'])) {
+    header('location:http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/login.php');
+  }
+  // echo '<pre>';
+  // print_r($_SESSION['user']);
+  // echo '</pre>';
+
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +97,10 @@
             <a class="dropdown-item" href="#">Settings</a>
             <a class="dropdown-item" href="#">Activity Log</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            <form action="" method="post">
+              <input type="submit" name="logout" class="dropdown-item"  data-toggle="modal" data-target="#logoutModal" value="logout">             
+            </input>
+            </form>
           </div>
         </li>
       </ul>
@@ -99,9 +118,10 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                   <h6 class="dropdown-header">Login Screens:</h6>
-                  <a class="dropdown-item" href="login.html">Login</a>
-                  <a class="dropdown-item" href="register.html">Register</a>
-                  <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+                  <a class="dropdown-item" href="http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/index.php">Index</a>
+                  <a class="dropdown-item" href="http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/login.php">Login</a>
+                  <a class="dropdown-item" href="http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/register.php">Register</a>
+                 
                  
                   
                 </div>
@@ -114,16 +134,12 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="pagesDropdown">
                  
-                  <a class="dropdown-item" href="../../users/aboutme/index.php">About me</a>
-                  <a class="dropdown-item" href="../../users/exp/index.php">Experience</a>
-                  <a class="dropdown-item" href="../../users/edu/index.php">Education</a>
+                  <a class="dropdown-item" href="http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/users/aboutme/index.php">About me</a>
+                  <a class="dropdown-item" href="http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/users/exp/index.php">Experience</a>
+                  <a class="dropdown-item" href="http://localhost:81/FTWD1801.PHPWEB/nampt/cv1/admin/users/edu/index.php">Education</a>
                   
                 </div>
-            </li>
-
-            
-
-
+            </li>           
         <li class="nav-item">
           <a class="nav-link" href="#">
             <i class="fas fa-fw fa-chart-area"></i>
@@ -131,3 +147,4 @@
         </li>
         
       </ul>
+  
