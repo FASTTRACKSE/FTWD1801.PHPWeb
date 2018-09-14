@@ -38,8 +38,8 @@
 	</div>
  	<table class="table table-hover">
   		<thead>
-		    <tr>
-		      <th scope="col">ID</th>
+			    <tr>
+			      <th scope="col">ID</th>
 		      <th scope="col">User Name</th>
 		      <th scope="col">Full Name</th>
 		      <th scope="col">Email</th>
