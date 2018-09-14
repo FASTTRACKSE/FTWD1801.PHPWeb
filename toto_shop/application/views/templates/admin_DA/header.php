@@ -28,6 +28,8 @@
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
 
+    <script src="<?= base_url('public/admin/plugins/')?>ckeditor/ckeditor.js"></script>
+
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 
 </head>
