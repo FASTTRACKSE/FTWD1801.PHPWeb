@@ -1,5 +1,5 @@
 
-	<?php	class Tinh extends CI_Controller {
+	<?php	class Tinh extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Tinh_model");

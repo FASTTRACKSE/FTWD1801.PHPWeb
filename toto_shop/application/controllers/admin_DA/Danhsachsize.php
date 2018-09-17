@@ -1,5 +1,5 @@
 
-	<?php	class Danhsachsize extends CI_Controller {
+	<?php	class Danhsachsize extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Danhsachsize_model");

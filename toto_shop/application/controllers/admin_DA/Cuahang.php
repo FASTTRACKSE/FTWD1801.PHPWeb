@@ -1,5 +1,5 @@
 
-	<?php	class Cuahang extends CI_Controller {
+	<?php	class Cuahang extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Cuahang_model");

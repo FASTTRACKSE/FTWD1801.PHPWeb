@@ -1,5 +1,5 @@
 
-	<?php	class Chitietsanpham extends CI_Controller {
+	<?php	class Chitietsanpham extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Chitietsanpham_model");

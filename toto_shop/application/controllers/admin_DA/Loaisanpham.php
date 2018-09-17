@@ -1,5 +1,5 @@
 
-	<?php	class Loaisanpham extends CI_Controller {
+	<?php	class Loaisanpham extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Loaisanpham_model");

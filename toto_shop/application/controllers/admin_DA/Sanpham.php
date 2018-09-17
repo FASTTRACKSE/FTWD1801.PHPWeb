@@ -1,5 +1,5 @@
 
-	<?php	class Sanpham extends CI_Controller {
+	<?php	class Sanpham extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Sanpham_model");

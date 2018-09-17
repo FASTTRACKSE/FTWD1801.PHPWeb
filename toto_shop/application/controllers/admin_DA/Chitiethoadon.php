@@ -1,5 +1,5 @@
 
-	<?php	class Chitiethoadon extends CI_Controller {
+	<?php	class Chitiethoadon extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Chitiethoadon_model");

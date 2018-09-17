@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Tintuc extends CI_Controller {
+class Tintuc extends MY_Controller {
 
 	public function __construct()
 	{

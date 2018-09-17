@@ -1,5 +1,5 @@
 
-	<?php	class Hoadon extends CI_Controller {
+	<?php	class Hoadon extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("Hoadon_model");

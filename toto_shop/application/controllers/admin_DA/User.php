@@ -1,5 +1,5 @@
 
-	<?php	class User extends CI_Controller {
+	<?php	class User extends MY_Controller {
 		public function index($cur_page=0) {
 			 
 			$this->load->model("User_model");

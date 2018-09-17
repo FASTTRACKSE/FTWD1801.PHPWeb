@@ -4,7 +4,7 @@
 				parent::__construct();
 				if($this->session->has_userdata(
 					'user')==FALSE) {
-					redirect("admin/login/index");
+					redirect("admin_DA/login/index");
 				}
 			}
 		}
