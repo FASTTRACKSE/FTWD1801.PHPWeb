@@ -56,46 +56,49 @@
                     </li>
                     <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/loaisanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Loại sản phẩm</a>
+                        <a href="<?=base_url("admin_DA/loaisanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Loại sản phẩm</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/sanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Sản phẩm</a>
+                        <a href="<?=base_url("admin_DA/sanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Sản phẩm</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/hoadon/index")?>" ><i class="menu-icon fa fa-table"></i>Hóa đơn</a>
+                        <a href="<?=base_url("admin_DA/hoadon/index")?>" ><i class="menu-icon fa fa-table"></i>Hóa đơn</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/chitiethoadon/index")?>" ><i class="menu-icon fa fa-table"></i>Chi tiết hóa đơn</a>
+                        <a href="<?=base_url("admin_DA/chitiethoadon/index")?>" ><i class="menu-icon fa fa-table"></i>Chi tiết hóa đơn</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/cuahang/index")?>" ><i class="menu-icon fa fa-table"></i>Cửa hàng</a>
+                        <a href="<?=base_url("admin_DA/cuahang/index")?>" ><i class="menu-icon fa fa-table"></i>Cửa hàng</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/danhsachsize/index")?>" ><i class="menu-icon fa fa-table"></i>Danh sách size</a>
+                        <a href="<?=base_url("admin_DA/danhsachsize/index")?>" ><i class="menu-icon fa fa-table"></i>Danh sách size</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/khachhang/index")?>" ><i class="menu-icon fa fa-table"></i>Khách hàng</a>
+                        <a href="<?=base_url("admin_DA/khachhang/index")?>" ><i class="menu-icon fa fa-table"></i>Khách hàng</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/khosanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Kho sản phẩm</a>
+                        <a href="<?=base_url("admin_DA/khosanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Kho sản phẩm</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/chitietsanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Chi tiết sản phẩm</a>
+                        <a href="<?=base_url("admin_DA/chitietsanpham/index")?>" ><i class="menu-icon fa fa-table"></i>Chi tiết sản phẩm</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/khuyenmai/index")?>" ><i class="menu-icon fa fa-table"></i>Khuyễn mãi</a>
+                        <a href="<?=base_url("admin_DA/khuyenmai/index")?>" ><i class="menu-icon fa fa-table"></i>Khuyễn mãi</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/tinh/index")?>" ><i class="menu-icon fa fa-table"></i>Tỉnh</a>
+                        <a href="<?=base_url("admin_DA/tintuc/index")?>" ><i class="menu-icon fa fa-table"></i>Tin Tức</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/huyen/index")?>" ><i class="menu-icon fa fa-table"></i>Huyện</a>
+                        <a href="<?=base_url("admin_DA/tinh/index")?>" ><i class="menu-icon fa fa-table"></i>Tỉnh</a>
                     </li>
                     <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin_DA/user/index")?>" ><i class="menu-icon fa fa-table"></i>User</a>
+                        <a href="<?=base_url("admin_DA/huyen/index")?>" ><i class="menu-icon fa fa-table"></i>Huyện</a>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="<?=base_url("admin_DA/user/index")?>" ><i class="menu-icon fa fa-table"></i>User</a>
                     </li>
                    <!--  <li class="menu-item-has-children dropdown">
-                        <a href="<?=base_url("index.php/admin/contact/index")?>" ><i class="menu-icon fa fa-table"></i>Contact</a>
+                        <a href="<?=base_url("admin/contact/index")?>" ><i class="menu-icon fa fa-table"></i>Contact</a>
                     </li> -->
 
 
@@ -216,7 +219,7 @@
 
                                 <a class="nav-link" href="#"><i class="fa fa -cog"></i>Settings</a>
 
-                                <a class="nav-link" href="<?=base_url("index.php/admin_DA/login/logout")?>"><i class="fa fa-power -off"></i>Logout</a>
+                                <a class="nav-link" href="<?=base_url("admin_DA/login/logout")?>"><i class="fa fa-power -off"></i>Logout</a>
                         </div>
                     </div>
 
