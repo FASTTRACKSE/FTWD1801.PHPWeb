@@ -28,7 +28,7 @@
                         <div class="card-header">
                             <strong class="card-title">khách hàng</strong>
                         </div>
-                        <a href="<?=base_url("index.php/admin_DA/tintuc/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
+                        <a href="<?=base_url("admin_DA/tintuc/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
                         <br>
                         <div class="row" style="margin-left: 20px;">
                             <form action="" method="GET">
@@ -46,14 +46,14 @@
                       </tr>
                     </thead>
                     <tbody> 
-                      <?php foreach ( $tinh as $item ) {?>
+                      <?php foreach ( $tintuc as $item =>$value ) {?>
                     <tr role="row" class="odd">
 
-                        <td class="sorting_1"><?php echo $item["noidung"] ?></td>
+                        <td class="sorting_1"><?php echo $value["noidung"] ?></td>
                                             
                         <td>
-                            <!-- <a href="<?=base_url("index.php/admin_DA/tinh/edit/").$item['id_tinh']?>">sửa</a> ||
-                            <a href="<?=base_url("index.php/admin_DA/tinh/delete/{$item['id_tinh']}")?>">xóa</a>  -->
+                            <a href="<?=base_url("admin_DA/tintuc/edit/").$value['id']?>">sửa</a> ||
+                            <a href="<?=base_url("admin_DA/tintuc/delete/{$value['id']}")?>">xóa</a> 
                         </td>
                         </tr>
                        <?php }?>

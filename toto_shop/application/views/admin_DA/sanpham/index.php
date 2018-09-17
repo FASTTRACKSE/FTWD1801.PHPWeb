@@ -28,7 +28,7 @@
                         <div class="card-header">
                             <strong class="card-title">Sản phẩm</strong>
                         </div>
-                        <a href="<?=base_url("index.php/admin_DA/sanpham/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
+                        <a href="<?=base_url("index.php/admin_DA/sanpham/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;"> thêm</button></a>
                         <br>
                         <div class="row" style="margin-left: 20px;">
                             <form action="" method="GET">
@@ -59,7 +59,7 @@
                                             <td><?php echo $item["loai_sp"] ?></td>
                                             <td><?php echo $item["rating"] ?></td>
                                             <td><?php echo $item["gia"] ?></td>
-                                            <td ><img src="../../../uploads/<?=$item['hinhanh']?>" ></td>               
+                                            <td ><img src="../../../uploads/<?= $item['hinhanh']?>"></td>               
                         <td>
                             <a href="<?=base_url("index.php/admin_DA/sanpham/edit/").$item['id_sp']?>">sửa</a> ||
                             <a href="<?=base_url("index.php/admin_DA/sanpham/delete/{$item['id_sp']}")?>">xóa</a> 
