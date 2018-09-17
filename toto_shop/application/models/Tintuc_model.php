@@ -24,9 +24,24 @@ class Tintuc_model extends CI_Model {
 	}
 
 	public function add ($arr) {
-			return $this->db->insert('tintuc',$arr);
-		}
+		return $this->db->insert('tintuc',$arr);
+	}
 
+	public function delete($id) {
+		$this->db->where('id', $id);
+		return $this->db->delete('tintuc');
+	}
+
+	public function edit ($arr,$id){
+		$this->db->where("id = $id");
+		return $this->db->update('tintuc',$arr);
+	}
+	public function get_info($id) {
+		$this->load->database();
+		$this->db->where("id = $id");
+		$rs = $this->db->get("tintuc");
+		return $rs->result_array();
+	}
 }
 
 /* End of file Tintuc_model.php */

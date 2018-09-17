@@ -33,19 +33,19 @@
                         <textarea type="text" id="ckfinder" class="form-control ckeditor" name="ckfinder"></textarea>
                     </div>
                     <script>
-                        var editor = CKEDITOR.replace('ckfinder', {
-                            language: 'vi',
-                            filebrowserBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html',
+                        var editor = CKEDITOR.replace( 'ckfinder', {
+                        language:'vi',
+                        filebrowserBrowseUrl : '../../public/admin/plugins/ckfinder/ckfinder.html',
 
-                            filebrowserImageBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html?type=Images',
+                        filebrowserImageBrowseUrl : '../../public/admin/plugins/ckfinder/ckfinder.html?type=Images',
 
-                            filebrowserFlashBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html?type=Flash',
+                        filebrowserFlashBrowseUrl : '../../public/admin/plugins/ckfinder/ckfinder.html?type=Flash',
 
-                            filebrowserUploadUrl: '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                        filebrowserUploadUrl : '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
 
-                            filebrowserImageUploadUrl: '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                        filebrowserImageUploadUrl : '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
 
-                            filebrowserFlashUploadUrl: '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                        filebrowserFlashUploadUrl : '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
                         });
                     </script>
                 </div>
