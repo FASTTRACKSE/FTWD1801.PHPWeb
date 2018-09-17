@@ -26,16 +26,21 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Sản phẩm</strong>
+                            <strong class="card-title">Hóa đơn</strong>
                         </div>
-                        <a href="<?=base_url("index.php/admin_DA/hoadon/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
                         <br>
                         <div class="row" style="margin-left: 20px;">
                             <form action="" method="GET">
                                 <input type="text" name="search" value="<?php echo $this->input->get("search") ?>">
                                 <input type="submit" class="btn btn-primary" value="search">
                              </form>
-                        </div>
+                        </div> <br>
+                        <div style="margin-left: 20px;">
+                           <a href="" ><button class="btn btn-primary-lg" style="height: 40px;">Thống kê doanh thu</button></a>
+                            <a href="" ><button class="btn btn-primary" style="height: 40px;">Danh sách chưa giao hàng</button></a>
+                            <a href="" ><button class="btn btn-primary" style="height: 40px;">Danh sách đang giao hàng</button></a>
+                            <a href="" ><button class="btn btn-primary" style="height: 40px;">Danh sách đã giao hàng</button></a>
+                       </div>
                         <div class="card-body">
                   <div id="bootstrap-data-table_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="bootstrap-data-table_length"><div id="bootstrap-data-table_filter" class="dataTables_filter"></div></div></div><div class="row"><div class="col-sm-12"><table id="bootstrap-data-table" class="table table-striped table-bordered dataTable no-footer" role="grid" aria-describedby="bootstrap-data-table_info">
                     <thead>
@@ -44,15 +49,16 @@
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="hoten">họ tên</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="sdt" value="">sdt</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="email" value="">email</th>
-                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="thanhpho" value="">thành phố</th>
-                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="huyen" value="">huyện</th>
+                        <!-- <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="thanhpho" value="">thành phố</th>
+                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="huyen" value="">huyện</th> -->
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="diachi" value="">địa chỉ</th>
-                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="hinhthuc" value="">hình thức</th>
+                        <!-- <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="hinhthuc" value="">hình thức</th> -->
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="tongtien" value="">tổng tiền</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="ngay_tao" value="">ngay_tao</th>
                         <!-- <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="id_kh" value="">id_kh</th> -->
                         <!-- <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="trangthai" value="">trạng thái</th> -->
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="ngay_giao" value="">ngay_giao</th>
+                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="" value="">hoạt động</th>
                       </tr>
                     </thead>
                     <tbody> 
@@ -63,10 +69,10 @@
                                             <td><?php echo $item["hoten"] ?></td>
                                             <td><?php echo $item["sdt"] ?></td>
                                             <td><?php echo $item["email"] ?></td>
-                                            <td><?php echo $item["thanhpho"] ?></td>
-                                            <td><?php echo $item["huyen"] ?></td>
                                             <td><?php echo $item["diachi"] ?></td>
-                                            <td><?php echo $item["hinhthuc"] ?></td>
+                                           <!--  <td><?php echo $item["thanhpho"] ?></td>
+                                            <td><?php echo $item["huyen"] ?></td> -->
+                                            <!-- <td><?php echo $item["hinhthuc"] ?></td> -->
                                             <td><?php echo $item["tongtien"] ?></td>
                                             <td><?php echo $item["ngay_tao"] ?></td>
                                             <!-- <td><?php echo $item["id_kh"] ?></td> 
@@ -79,7 +85,9 @@
                                             </td> -->
                                             <td><?php echo $item["ngay_giao"] ?></td>
                                             <!-- <td><?php echo $item["id_cuahang_giao"] ?></td> -->
-                                            
+                                            <td>
+                                                <a href="">xem chi tiết</a>
+                                            </td>
 
                         </tr>
                        <?php }?>

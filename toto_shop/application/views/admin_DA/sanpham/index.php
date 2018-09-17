@@ -45,7 +45,7 @@
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="loai_sp" value="">loai_sp</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="rating" value="">rating</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="gia" value="">giá</th>
-                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="chitiet" value="">chi tiết</th>
+                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="image" value="">hình ảnh</th>
                         <!-- <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="hinhanh" value="">hình ảnh</th> -->
                       <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 117px;"><a href="">hoạt động</th>
                       </tr>
@@ -59,7 +59,7 @@
                                             <td><?php echo $item["loai_sp"] ?></td>
                                             <td><?php echo $item["rating"] ?></td>
                                             <td><?php echo $item["gia"] ?></td>
-                                            <td><?php echo $item["chitiet"] ?></td>               
+                                            <td ><img src="../../../uploads/<?=$item['hinhanh']?>" ></td>               
                         <td>
                             <a href="<?=base_url("index.php/admin_DA/sanpham/edit/").$item['id_sp']?>">sửa</a> ||
                             <a href="<?=base_url("index.php/admin_DA/sanpham/delete/{$item['id_sp']}")?>">xóa</a> 

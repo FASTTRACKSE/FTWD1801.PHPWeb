@@ -16,6 +16,13 @@
 			return $rs->result_array();
 
 		}
+		public function check_user($username,$password) {
+			// $this->db->select("id");
+			//  where username='$username' AND password='$password';
+			$this->db->where("username='$username' AND password='$password'");
+			$rs=$this->db->get($this->table);
+			return $rs->row_array();
+		}
 		public function count_rows($search){
 			$this->db->where("id like '%$search%'");
 			return $this->db->count_all_results('user'); 

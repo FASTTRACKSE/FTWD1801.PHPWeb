@@ -26,7 +26,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">khách hàng</strong>
+                            <strong class="card-title">Khuyến mãi</strong>
                         </div>
                         <a href="<?=base_url("index.php/admin_DA/khuyenmai/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
                         <br>

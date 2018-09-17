@@ -26,7 +26,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Danh mục sản phẩm</strong>
+                            <strong class="card-title">Loại sản phẩm</strong>
                         </div>
                         <a href="<?=base_url("index.php/admin_DA/loaisanpham/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
                         <br>

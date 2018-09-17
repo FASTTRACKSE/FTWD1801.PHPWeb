@@ -27,7 +27,7 @@
                     </div>
                      <?php foreach ( $item as $item ) {?>
                       <div class="card-body card-block">
-                        <form action="" method="POST" >
+                        <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group"  >
                             <label for="company" class=" form-control-label">id_sp</label>
                             <input type="text" id="company" class="form-control" name="id_sp" value="<?=$item["id_sp"]?>">
@@ -49,8 +49,8 @@
                             <input type="text" id="vat"  class="form-control" name="gia" value="<?=$item["gia"]?>">
                         </div>
                         <div class="form-group">
-                            <label for="vat" class=" form-control-label" >chi tiết</label>
-                            <input type="text" id="vat"  class="form-control" name="chitiet" value="<?=$item["chitiet"]?>">
+                            <label for="vat" class=" form-control-label" >hình ảnh</label>
+                            <input type="file" id="vat"  class="form-control" name="hinhanh" value="<?=$item["hinhanh"]?>">
                         </div>
                         <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 500px;">thực hiện</button>
                         </div>

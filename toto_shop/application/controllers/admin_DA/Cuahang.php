@@ -8,7 +8,7 @@
 			$search=$this->input->get("search");
 			$config['base_url']=base_url("index.php/admin_DA/cuahang/index?search=$search");
 			$config['total_rows']=$this->Cuahang_model->count_rows($search);
-			$config['per_page']=5;
+			$config['per_page']=10;
 			$config['page_query_string']=TRUE;
 			$config['full_tag_open']="<ul class='pagination'>";
 			$config['full_tag_close']="</ul>";
@@ -35,15 +35,13 @@
 			$this->load->library('form_validation');
 			$item= $this->Cuahang_model->get_info($id_cuahang);
 			$data['item']=$item;
-			$this->form_validation->set_rules("ten","cửa hàng","required");
+			$this->form_validation->set_rules("diachi","địa chỉ","required");
 			if($this->form_validation->run()==FALSE){
 				$this->load->view("templates/admin_DA/master",$data);
 			}else{
-				$ten = $this->input->post('ten');
 				$diachi = $this->input->post('diachi');
 				$sdt = $this->input->post('sdt');
 				$data=array(
-					'ten'=>$ten,
 					'diachi'=>$diachi,
 					'sdt'=>$sdt
 					);
@@ -60,12 +58,11 @@
 			$data["content"]="admin_DA/cuahang/add";
 			$this->load->model("Cuahang_model");
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules("ten","cửa hàng","required");
+			$this->form_validation->set_rules("diachi","địa chỉ","required");
 			if($this->form_validation->run()==false){
 				$this->load->view("templates/admin_DA/master",$data);	
 			}else{
 				$data= array(
-					'ten'=>$this->input->post("ten"),
 					'diachi'=>$this->input->post("diachi"),
 					'sdt'=>$this->input->post("sdt")
 				);

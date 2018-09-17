@@ -33,10 +33,6 @@
                             <input type="text" id="company" class="form-control" name="id_cuahang" value="<?=$item["id_cuahang"]?>">
                         </div>
                         <div class="form-group">
-                            <label for="vat" class=" form-control-label" >tên </label>
-                            <input type="text" id="vat"  class="form-control" name="ten" value="<?=$item["ten"]?>">
-                        </div>
-                        <div class="form-group">
                             <label for="vat" class=" form-control-label" >địa chỉ</label>
                             <input type="text" id="vat"  class="form-control" name="diachi" value="<?=$item["diachi"]?>">
                         </div>

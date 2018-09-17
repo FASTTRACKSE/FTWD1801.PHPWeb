@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
@@ -43,8 +43,8 @@
                             <input type="text" id="company" placeholder="giá" class="form-control" name="gia">
                         </div>
                         <div class="form-group">
-                            <label for="company" class=" form-control-label" >chi tiết</label>
-                            <input type="text" id="company" placeholder="chi tiết" class="form-control" name="chitiet">
+                            <label for="company" class=" form-control-label" >hình ảnh</label>
+                            <input type="file" id="company" placeholder="" class="form-control" name="hinhanh">
                         </div>
                       </div>
                         

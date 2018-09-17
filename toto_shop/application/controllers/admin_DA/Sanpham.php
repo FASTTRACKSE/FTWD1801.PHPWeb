@@ -32,6 +32,7 @@
 		public function edit($id_sp) {
 			$data["content"]="admin_DA/sanpham/edit";
 			$this->load->model("Sanpham_model");
+			$this->load->helper(array('form','url'));
 			$this->load->library('form_validation');
 			$item= $this->Sanpham_model->get_info($id_sp);
 			$data['item']=$item;
@@ -44,31 +45,24 @@
 				$loai_sp = $this->input->post('loai_sp');
 				$rating = $this->input->post('rating');
 				$gia = $this->input->post('gia');
-				$chitiet = $this->input->post('chitiet');
-				// if (!empty($_FILES['chitiet']['name'])) {
-    //    					 $config['upload_path'] = 'upload';
-    //   					 $config['allowed_types'] = 'jpg|jpeg|png|gif';
-    //     				 $config['file_name'] = $_FILES['chitiet']['name'];
+				// $hinhanh = $this->input->post('hinhanh');
+        		$config['upload_path'] = 'uploads';
+        		$config['allowed_types'] = 'gif|jpg|png';
+        		$config['file_name'] = $_FILES['hinhanh']['name'];
 
-    //     			$this->load->library('upload', $config);
-    //     			$this->upload->initialize($config);
+        		$this->load->library('upload', $config);
+        		$this->upload->initialize($config);
 
-    //    				 if ($this->upload->do_upload('chitiet')) {
-    //       			$uploadData = $this->upload->data();
-    //      			 $data["image"] = $uploadData['file_name'];
-    //    				 } else{
-    //       			$data["image"] = '';
-    //     			}
-    //  				 }else{
-    //     			$data["image"] = '';
-    //  				 }
-
+        		$this->upload->do_upload('hinhanh');
+          		$uploadData = $this->upload->data();
+          		$hinhanh = $uploadData['file_name'];
+        
 				$data=array(
 					'tensp'=>$tensp,
 					'loai_sp'=>$loai_sp,
 					'rating'=>$rating,
 					'gia'=>$gia,
-					'chitiet'=>$chitiet
+					'hinhanh'=>$hinhanh
 				);
 				$rs=$this->Sanpham_model->edit($data,$id_sp);
 			if($rs) {
@@ -82,17 +76,34 @@
 		public function add() {
 			$data["content"]="admin_DA/sanpham/add";
 			$this->load->model("Sanpham_model");
+			$this->load->helper(array('form','url'));
 			$this->load->library('form_validation');
 			$this->form_validation->set_rules("tensp","sản phẩm","required");
 			if($this->form_validation->run()==false){
 				$this->load->view("templates/admin_DA/master",$data);	
 			}else{
+				$config['upload_path'] = 'uploads';
+        		$config['allowed_types'] = 'gif|jpg|png';
+        		$config['file_name'] = $_FILES['hinhanh']['name'];
+
+        		$this->load->library('upload', $config);
+        		$this->upload->initialize($config);
+
+        		$this->upload->do_upload('hinhanh');
+          		$uploadData = $this->upload->data();
+          		$hinhanh = $uploadData['file_name'];
+          		$tensp = $this->input->post('tensp');
+				$loai_sp = $this->input->post('loai_sp');
+				$rating = $this->input->post('rating');
+				$gia = $this->input->post('gia');
+
 				$data= array(
-					'tensp'=>$this->input->post("tensp"),
-					'loai_sp'=>$this->input->post("loai_sp"),
-					'rating'=>$this->input->post("rating"),
-					'gia'=>$this->input->post("gia"),
-					'chitiet'=>$this->input->post("chitiet")
+					'tensp'=>$tensp,
+					'loai_sp'=>$loai_sp,
+					'rating'=>$rating,
+					'gia'=>$gia,
+					'hinhanh'=>$hinhanh
+					
 				);
 				$rs=$this->Sanpham_model->add($data);
 				if($rs) {

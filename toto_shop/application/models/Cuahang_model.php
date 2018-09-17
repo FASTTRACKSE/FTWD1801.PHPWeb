@@ -21,7 +21,7 @@
 			return $this->db->count_all_results('cuahang'); 
 		}
 		public function get_search($search,$cur_page,$per_page){
-			$this->db->where("ten like '%$search%'");
+			$this->db->where("diachi like '%$search%'");
 			return $this->db->get($this->table,$per_page,$cur_page)->result_array();
 		}
 		public function edit ($arr,$id_cuahang){

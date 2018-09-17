@@ -26,10 +26,6 @@
                         <strong>thêm thông tin</strong>
                       </div>
                       <div class="card-body card-block">
-                        <div class="form-group">
-                            <label for="company" class=" form-control-label" >tên</label>
-                            <input type="text" id="company" placeholder="tên " class="form-control" name="ten">
-                        </div>
                       <div class="form-group">
                             <label for="company" class=" form-control-label" >địa chỉ</label>
                             <input type="text" id="company" placeholder="địa chỉ" class="form-control" name="diachi">

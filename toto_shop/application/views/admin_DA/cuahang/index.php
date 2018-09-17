@@ -26,7 +26,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">khách hàng</strong>
+                            <strong class="card-title">Cửa hàng</strong>
                         </div>
                         <a href="<?=base_url("index.php/admin_DA/cuahang/add")?>"><button  class="btn btn-primary btn-lg" style="width: 60px;height: 40px;margin-left: 30px;margin-top: 10px;" > thêm</button></a>
                         <br>
@@ -41,7 +41,6 @@
                     <thead>
                       <tr role="row">
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 337px;" name="id_cuahang">id_cuahang</th>
-                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="ten">tên</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="diachi" value="">địa chỉ</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="sdt" value="">sđt</th>
                       <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 117px;"><a href="">hoạt động</th>
@@ -52,7 +51,6 @@
                     <tr role="row" class="odd">
 
                         <td class="sorting_1"><?php echo $item["id_cuahang"] ?></td>
-                                            <td><?php echo $item["ten"] ?></td>
                                             <td><?php echo $item["diachi"] ?></td>
                                             <td><?php echo $item["sdt"] ?></td>
                                             
