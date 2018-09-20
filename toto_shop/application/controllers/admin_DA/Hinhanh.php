@@ -111,4 +111,16 @@
 			redirect("admin_DA/hinhanh/delete/$id");
 		}
 	}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
 	}
+>>>>>>> b012ecb02cde8e4070bd3eb6328e993e60a6ac0b
+=======
+	}
+>>>>>>> a1bdb9b60d34cf400e9a0207264280ae2db65651
+=======
+	}
+>>>>>>> a1bdb9b60d34cf400e9a0207264280ae2db65651

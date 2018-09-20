@@ -63,7 +63,7 @@
 			$data["content"]="admin_DA/chitietsanpham/add";
 			$this->load->model("Chitietsanpham_model");
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules("id_hd","hd","required");
+			$this->form_validation->set_rules("id_sp","hd","required");
 			if($this->form_validation->run()==false){
 				$this->load->view("templates/admin_DA/master",$data);	
 			}else{

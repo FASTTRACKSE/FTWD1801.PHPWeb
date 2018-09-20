@@ -791,13 +791,4 @@ class="owl-next"></div></div></div></div></div></div></div></section></div><styl
             }</style><style>.fixads-right,
     .fixads-left{
         display: none;
-    }</style></div><footer
-class="footer"><div
-class="boxPhone hidden-md hidden-lg">
-<a
-href="tel:0938803633"><div
-class="img_hotline">
-<img
-src="/tp/T0057/img/phone-trans.png" alt="hotline"/></div>
-</a></div><div
-class="whrite-h30"></div>
+    }</style></div>
