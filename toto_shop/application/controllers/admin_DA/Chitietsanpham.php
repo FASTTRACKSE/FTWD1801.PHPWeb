@@ -6,7 +6,7 @@
 			$cur_page=$this->input->get("per_page"); 
 			$this->load->library("pagination");
 			$search=$this->input->get("search");
-			$config['base_url']=base_url("index.php/admin_DA/chitietsanpham/index?search=$search");
+			$config['base_url']=base_url("admin_DA/chitietsanpham/index?search=$search");
 			$config['total_rows']=$this->Chitietsanpham_model->count_rows($search);
 			$config['per_page']=5;
 			$config['page_query_string']=TRUE;

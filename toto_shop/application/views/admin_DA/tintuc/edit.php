@@ -30,7 +30,7 @@
                         <form action="" method="POST" >
                         <div class="form-group">
                         <label for="company" class=" form-control-label">Ckfinder</label>
-                        <textarea type="text" id="ckfinder" class="form-control ckeditor" name="ckfinder" value="<?=$item["noidung"]?>"></textarea>
+                        <textarea type="text" id="ckfinder" class="form-control ckeditor" name="ckfinder" value="<?= $item["noidung"]?>"></textarea>
                     </div>
                     <script>
                         var editor = CKEDITOR.replace( 'ckfinder', {
