@@ -1,6 +1,0 @@
-<div class="main"><div class="ma-banner"><div class="container"><div class="container-inner"></div></div></div><div class="main-container col2-left-layout"><div class="container"><div class="container-inner"><div class="main"><div class="breadcrumbs"><ol class="breadcrumb"><li>
-<a href="/">Trang chủ</a></li><li>
-<a href="/cart">Giỏ hàng</a></li></ol></div><div class="main-inner"><div class="row" id="info-cart"><div class="col-main col-lg-12 col-md-12 col-sm-12 col-xs-12"><table><tbody><tr id="table-cart-tt"><td width="10%">Ảnh</td><td width="">Thông tin</td><td width="11%">Số lượng</td><td id="pro-money" width="24%">Thành tiền</td></tr><tr class="cartItem"><td colspan="6" style="padding: 20px 0; color: brown;text-align:center">Giỏ hàng của bạn hiện chưa có sản phẩm nào</td></tr><tr><td colspan="2" style="vertical-align: middle">
-<a href="<?=base_url()?>home" style="margin-left:  20px">Mua thêm sản phẩm khác</a></td><td colspan="2" style="text-align: right;padding-right: 5px;"><p id="price-sum">Tổng cộng: <span style="font-size: 20px;">
-Liên hệ                    </span></p><p id="checkout-cart">
-<a href="/cart/checkout" id="bt-ck-cart">Thanh toán</a></p></td></tr></tbody></table></div></div></div></div></div></div></div></div>

@@ -54,14 +54,14 @@
                         <td class="sorting_1"><?php echo $item["id"] ?></td>
                                             <td><?php echo $item["tenloai"] ?></td>
                                             <td><select name="gioitinh">
-                               <?php
-                                $stt_true=$stt_false="";
-                                if($item['gioitinh']==nam){
-                                    $stt_true="selected";
-                                }else{
-                                    $stt_false="selected";
-                                }
-                                ?>
+                                                <?php
+                                                    $stt_true=$stt_false="";
+                                                    if($item['gioitinh']==nam){
+                                                    $stt_true="selected";
+                                                    }else{
+                                                    $stt_false="selected";
+                                                }
+                                                ?>
                                 <option <?php echo $stt_true?> value="nam">nam </option>
                                 <option <?php echo $stt_false?> value="nu">nữ</option> 
                             </select></td>

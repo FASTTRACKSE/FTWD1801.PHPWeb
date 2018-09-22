@@ -9,9 +9,11 @@
 		}
 
 		public function get_sanpham() {
-			$this->load->database();
-			$this->db->select("*");
-			//$this->db->where("id_sp_contact>=",$number);
+			
+			
+			// $this->db->where('loai_sp',7);
+			// $this->db->or_where('loai_sp',8);
+			$this->db->where("loai_sp = 7");
 			$rs = $this->db->get("sanpham");
 			return $rs->result_array();
 

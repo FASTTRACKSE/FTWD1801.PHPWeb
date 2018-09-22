@@ -8,6 +8,9 @@ class Home extends CI_Controller {
 		// $data['content1']="home/index"
 		// $this->load->view("home/index",$data);
 		$this->load->view("templates/frontend/master",$data);
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>"; die();
 	}
 	public function giohang() {
 		$this->load->model("Sanpham_model");
@@ -296,5 +299,9 @@ class Home extends CI_Controller {
 		// $data['content1']="home/index"
 		// $this->load->view("home/index",$data);
 		$this->load->view("templates/frontend/master",$data);
+	}
+	public function insert($id_sp) {
+		$list=$this->Sanpham_model->get_sanpham($id_sp);
+		
 	}
 }
