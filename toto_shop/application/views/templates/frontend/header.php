@@ -347,7 +347,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-sm-3 col-xs-12">
-            <div class="logo"><a title="ecommerce Template" href="index.html"><img alt="ecommerce Template" src="http://cdn.nhanh.vn/cdn/store/7136/store_1514252913_443.png"></a></div>
+            <div class="logo"><a title="ecommerce Template" href="<?=base_url()?>home"><img alt="ecommerce Template" src="http://cdn.nhanh.vn/cdn/store/7136/store_1514252913_443.png"></a></div>
             <div class="nav-icon">
               <div class="mega-container visible-lg visible-md visible-sm">
                 <div class="navleft-container" >
