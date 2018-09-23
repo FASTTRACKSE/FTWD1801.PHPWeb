@@ -11,7 +11,7 @@
 		public function get_loaisanpham() {
 			$this->load->database();
 			$this->db->select("*");
-			//$this->db->where("id_contact>=",$number);
+			// $this->db->where("id_cha=0");
 			$rs = $this->db->get("loai_sp");
 			return $rs->result_array();
 

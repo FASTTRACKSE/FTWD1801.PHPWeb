@@ -9,15 +9,18 @@
 		}
 
 		public function get_sanpham() {
-			
-			
-			// $this->db->where('loai_sp',7);
-			// $this->db->or_where('loai_sp',8);
-			$this->db->where("loai_sp = 7");
-			$rs = $this->db->get("sanpham");
+			$rs = $this->db->get("sanpham",8,20);
 			return $rs->result_array();
-
 		}
+		public function get_sanpham1() {
+			$rs1 = $this->db->get("sanpham",8,108);
+			return $rs1->result_array();
+		}
+		public function get_sanphamhangdau() {
+			$sanphamhangdau = $this->db->get("sanpham",8,127);
+			return $sanphamhangdau->result_array();
+		}
+
 		public function count_rows($search){
 			$this->db->where("id_sp like '%$search%'");
 			return $this->db->count_all_results('sanpham'); 

@@ -8,7 +8,7 @@
 			$search=$this->input->get("search");
 			$config['base_url']=base_url("index.php/admin_DA/hinhanh/index?search=$search");
 			$config['total_rows']=$this->Hinhanh_model->count_rows($search);
-			$config['per_page']=10;
+			$config['per_page']=5;
 			$config['page_query_string']=TRUE;
 			$config['full_tag_open']="<ul class='pagination'>";
 			$config['full_tag_close']="</ul>";
@@ -35,7 +35,7 @@
 			$this->load->library('form_validation');
 			$item= $this->Hinhanh_model->get_info($id);
 			$data['item']=$item;
-			$this->form_validation->set_rules("image","hình ảnh","required");
+			$this->form_validation->set_rules("tensanpham","hình ảnh","required");
 			if($this->form_validation->run()==FALSE){
 				$this->load->view("templates/admin_DA/master",$data);
 			}else{
@@ -50,9 +50,10 @@
         		$this->upload->do_upload('image');
           		$uploadData = $this->upload->data();
           		$image = $uploadData['file_name'];
-        
+        		$tensanpham = $this->input->post('tensanpham');
 				$data=array(
 					'image'=>$image,
+					'tensanpham'=>$tensanpham
 					);
 				$rs=$this->Hinhanh_model->edit($data,$id);
 			if($rs) {
@@ -67,7 +68,7 @@
 			$data["content"]="admin_DA/hinhanh/add";
 			$this->load->model("Hinhanh_model");
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules("image","hình ảnh","required");
+			$this->form_validation->set_rules("tensanpham","hình ảnh","required");
 			if($this->form_validation->run()==false){
 				$this->load->view("templates/admin_DA/master",$data);	
 			}else{
@@ -81,9 +82,10 @@
         		$this->upload->do_upload('image');
           		$uploadData = $this->upload->data();
           		$image = $uploadData['file_name'];
-        
+        		$tensanpham = $this->input->post('tensanpham');
 				$data=array(
 					'image'=>$image,
+					'tensanpham'=>$tensanpham
 					);
 				$rs=$this->Hinhanh_model->add($data);
 				if($rs) {
@@ -111,16 +113,4 @@
 			redirect("admin_DA/hinhanh/delete/$id");
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-	}
->>>>>>> b012ecb02cde8e4070bd3eb6328e993e60a6ac0b
-=======
-	}
->>>>>>> a1bdb9b60d34cf400e9a0207264280ae2db65651
-=======
-	}
->>>>>>> a1bdb9b60d34cf400e9a0207264280ae2db65651

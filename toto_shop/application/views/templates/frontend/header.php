@@ -8,10 +8,10 @@
 <meta name="description" content="Fabulous is a creative, clean, fully responsive, powerful and multipurpose HTML Template with latest website trends. Perfect to all type of fashion stores.">
 <meta name="keywords" content="HTML,CSS,womens clothes,fashion,mens fashion,fashion show,fashion week">
 <meta name="author" content="JTV">
-<title>Fabulous - Multipurpose Online Marketplace HTML Template</title>
+<title>TOTOSHOP</title>
 
 <!-- Favicons Icon -->
-<link rel="icon" href="<?=base_url()?>assets_frontend/images/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="http://cdn.nhanh.vn/cdn/store/7136/store_1483155611_178.png" type="image/x-icon" />
 
 <!-- Mobile Specific -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -343,203 +343,141 @@
 <div id="page"> 
   <!-- Header -->
   <header>
-    <div class="header-container">
+    <div class="header-container" style="background-color: black;">
       <div class="container">
         <div class="row">
           <div class="col-lg-3 col-sm-3 col-xs-12">
-            <div class="logo"><a title="ecommerce Template" href="index.html"><img alt="ecommerce Template" src="<?=base_url()?>assets_frontend/images/logo.png"></a></div>
+            <div class="logo"><a title="ecommerce Template" href="index.html"><img alt="ecommerce Template" src="http://cdn.nhanh.vn/cdn/store/7136/store_1514252913_443.png"></a></div>
             <div class="nav-icon">
               <div class="mega-container visible-lg visible-md visible-sm">
-                <div class="navleft-container">
-                  <div class="mega-menu-title">
-                    <h3><i class="fa fa-navicon"></i>Categories</h3>
+                <div class="navleft-container" >
+                  <div class="mega-menu-title" style="background-color: #EAAB00;">
+                    <h3><i class="fa fa-navicon"></i>DANH MỤC SẢN PHẨM</h3>
                   </div>
                   <div class="mega-menu-category">
                     <ul class="nav">
-                      <li><a href="#">Home</a>
+                      <li><a href="#">NEW ARRIVALS</a>
                         <div class="wrap-popup column1">
                           <div class="popup">
                             <ul class="nav">
-                              <li><a href="index.html">Home Shop 1</a></li>
-        <li><a href="version2/index.html">Home Shop 2</a></li>
-        <li><a href="version3/index.html">Home Shop 3</a></li>
-        <li><a href="version4/index.html">Home Shop 4</a></li>
+                              <li><a href="index.html">NAM</a></li>
+                              <li><a href="version2/index.html">NỮ</a></li>
                             </ul>
                           </div>
                         </div>
                       </li>
-                      <li><a href="#">Page</a>
-                        <div class="wrap-popup">
-                          <div class="popup">
-                            <div class="row">
-                              <div class="col-sm-4">
-                                <ul class="nav">
-                                  <li><a href="shop-grid.html"><span>Shop Grid</span></a></li>
-                                  <li><a href="shop-grid-sidebar.html"><span>Shop Grid Sidebar</span></a></li>
-                                  <li><a href="shop-list.html"><span>Shop List</span></a></li>
-                                  <li><a href="shop-list-sidebar.html"><span>Shop List Sidebar</span></a></li>
-                                  <li><a href="product-detail.html"><span>Product Detail</span></a></li>
-                                  <li><a href="product-detail-sidebar.html"><span>Product Detail Sidebar</span></a></li>
-                                  <li><a href="shopping-cart.html"><span>Shopping Cart</span></a></li>
-                                </ul>
-                              </div>
-                              <div class="col-sm-4">
-                                <ul class="nav">
-                                  <li><a href="checkout.html"><span>Checkout</span></a></li>
-                                  <li><a href="wishlist.html"><span>Wishlist</span></a></li>
-                                  <li><a href="dashboard.html"><span>Dashboard</span></a></li>
-                                  <li><a href="compare.html"><span>Compare</span></a></li>
-                                  <li><a href="quick-view.html"><span>Quick View</span></a></li>
-                                  <li><a href="complete-order.html">Complete Order</a></li>
-                                  <li><a href="my-account-information.html">Account Information</a></li>
-                                </ul>
-                              </div>
-                              <div class="col-sm-4">
-                                <ul class="nav">
-                                  <li><a href="faq.html"><span>FAQ</span></a></li>
-                                  <li><a href="sitemap.html"><span>Sitemap</span></a></li>
-                                  <li><a href="track-order.html"><span>Track Order</span></a></li>
-                                  <li><a href="register-ac.html"><span>Register Account</span></a></li>
-                                  <li><a href="forgot-password.html"><span>Forgot Password</span></a></li>
-                                  <li><a href="team.html"><span>Team</span></a></li>
-                                  <li><a href="404error.html"><span>404 Error Page</span></a></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li><a href="#">Men's</a>
-                        <div class="wrap-popup">
-                          <div class="popup">
-                            <div class="row">
-                              <div class="col-md-4 col-sm-6">
-                                <h3><a href="shop-grid-sidebar.html">Clothing</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">T-Shirts</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Shirts</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Trousers</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Sleep Wear</a></li>
-                                </ul>
-                                <br>
-                                <h3><a href="shop-grid-sidebar.html">Shoes</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Flat Shoes</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Flat Sandals</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Boots</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Heels</a></li>
-                                </ul>
-                              </div>
-                              <div class="col-md-4 col-sm-6 has-sep">
-                                <h3><a href="shop-grid-sidebar.html">Jwellery</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Bracelets</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Necklaces &amp; Pendent</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Pendants</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Pins &amp; Brooches</a></li>
-                                </ul>
-                                <br>
-                                <h3><a href="shop-grid-sidebar.html">Watches</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Fastrack</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Casio</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Sonata</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Maxima</a></li>
-                                </ul>
-                              </div>
-                              <div class="col-md-4 has-sep hidden-sm">
-                                <div class="custom-menu-right">
-                                  <div class="box-banner media">
-                                    <div class="add-right"><a href="#"><img src="<?=base_url()?>assets_frontend/images/jtv-menu-banner1.jpg" class="img-responsive" alt="New Arrive"></a></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <br>
-                            <a href="#" class="ads"><img src="<?=base_url()?>assets_frontend/images/jtv-menu-banner4.jpg" alt="Mega Sale" class="img-responsive"></a> </div>
-                        </div>
-                      </li>
-                      <li><a href="#">Women's</a>
-                        <div class="wrap-popup">
-                          <div class="popup">
-                            <div class="row">
-                              <div class="col-md-4 col-sm-6">
-                                <h3><a href="shop-grid-sidebar.html">Clothing</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Dress sale</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Sarees</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Kurta & kurti</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Dress materials</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Salwar kameez sets</a></li>
-                                </ul>
-                                <br>
-                                <h3><a href="shop-grid-sidebar.html">Jewellery</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Rings</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Earrings</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Jewellery sets</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Pendants & lockets</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Plastic jewellery</a></li>
-                                </ul>
-                              </div>
-                              <div class="col-md-4 col-sm-6 has-sep">
-                                <h3><a href="shop-grid-sidebar.html">Beauty</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Make up</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Hair care</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Deodorants</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Bath & body</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Skin care</a></li>
-                                </ul>
-                                <br>
-                                <h3><a href="shop-grid-sidebar.html">Footwear</a></h3>
-                                <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Flats</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Heels</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Boots</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Slippers</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Shoes</a></li>
-                                </ul>
-                              </div>
-                              <div class="col-md-4 has-sep hidden-sm">
-                                <div class="custom-menu-right">
-                                  <div class="box-banner media">
-                                    <div class="add-desc">
-                                      <h3>Top<br>
-                                        Glass </h3>
-                                      <div class="price-sale">2018</div>
-                                      <a href="#">Shop Now</a> </div>
-                                    <div class="add-right"><img src="<?=base_url()?>assets_frontend/images/jtv-menu-banner2.jpg" alt="Top Glass" class="img-responsive"></div>
-                                  </div>
-                                  <div class="box-banner media">
-                                    <div class="add-desc">
-                                      <h3>Save</h3>
-                                      <div class="price-sale">35%</div>
-                                      <a href="#">Buy Now</a> </div>
-                                    <div class="add-right"><img src="<?=base_url()?>assets_frontend/images/jtv-menu-banner3.jpg" alt="Save 35%" class="img-responsive"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="nosub"><a href="shop-grid-sidebar.html">Kids</a></li>
-                      <li class="nosub"><a href="shop-grid-sidebar.html">Accessories</a></li>
-                      <li><a href="blog.html">Blog</a>
+                       <li><a href="#">ĐỒ  NAM</a>
                         <div class="wrap-popup column1">
                           <div class="popup">
                             <ul class="nav">
-                              <li><a href="blog.html">Blog</a></li>
-                              <li><a href="blog-archive.html">Blog Archive</a></li>
-                              <li><a href="blog_single_post.html">Blog Single</a></li>
+                              <li><a href="index.html">ÁO THUN</a></li>
+                              <li><a href="version2/index.html">ÁO SƠ MI</a></li>
+                              <li><a href="version2/index.html">QUẦN JEAN</a></li>
+                              <li><a href="version2/index.html">QUẦN KAKI</a></li>
+                              <li><a href="version2/index.html">QUẦN JOGGER</a></li>
+                              <li><a href="version2/index.html">QUẦN SHORT</a></li>
                             </ul>
                           </div>
                         </div>
                       </li>
-                      <li class="nosub"><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">ĐỒ  NỮ</a>
+                        <div class="wrap-popup column1">
+                          <div class="popup">
+                            <ul class="nav">
+                              <li><a href="index.html">ÁO KIỂU</a></li>
+                              <li><a href="version2/index.html">ĐẦM NỮ</a></li>
+                              <li><a href="version2/index.html">CHÂN VÁY</a></li>
+                              <li><a href="version2/index.html">ÁO SƠ MI</a></li>
+                              <li><a href="version2/index.html">QUẦN JEAN</a></li>
+                              <li><a href="version2/index.html">QUẦN SHORT</a></li>
+                              <li><a href="version2/index.html">QUẦN THUN</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </li>
+                      <li><a href="#">ÁO KHOÁC</a>
+                        <div class="wrap-popup" style="width: 250px;">
+                          <div class="popup">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h3><a href="shop-grid-sidebar.html">ÁO KHOÁC NAM</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Áo Khoác Hoodie</a></li>
+                                </ul>
+                                <br>
+                                <h3><a href="shop-grid-sidebar.html">ÁO KHOÁC NỮ</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Áo Khoác Hoodie</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li><a href="#">ÁO THUN</a>
+                        <div class="wrap-popup" style="width: 250px;">
+                          <div class="popup">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h3><a href="shop-grid-sidebar.html">ÁO THUN NAM</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Áo Thun Tay Ngắn</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Áo Thun Tay Dài</a></li>
+                                </ul>
+                                <br>
+                                <h3><a href="shop-grid-sidebar.html">ÁO THUN NỮ</a></h3>
+                                <ul class="nav">
+                                 <li><a href="shop-grid-sidebar.html">Áo Thun Tay Ngắn</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Áo Thun Tay Dài</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      
+                      <li><a href="#">ÁO SƠ MI</a>
+                        <div class="wrap-popup" style="width: 250px;">
+                          <div class="popup">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h3><a href="shop-grid-sidebar.html">ÁO SƠ MI NAM</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Ngắn</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Dài</a></li>
+                                </ul>
+                                <br>
+                                <h3><a href="shop-grid-sidebar.html">ÁO SƠ MI NỮ</a></h3>
+                                <ul class="nav">
+                                 <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Ngắn</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Dài</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li><a href="#">QUẦN SHORT</a>
+                        <div class="wrap-popup" style="width: 250px;">
+                          <div class="popup">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <h3><a href="shop-grid-sidebar.html">QUẦN SHORT NAM</a></h3>
+                                <ul class="nav">
+                                  <li><a href="shop-grid-sidebar.html">Short kaki</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Short jean</a></li>
+                                  <li><a href="shop-grid-sidebar.html">Short thun</a></li>
+                                </ul>
+                                <br>
+                                <h3><a href="shop-grid-sidebar.html">QUẦN SHORT NỮ</a></h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      </li>
                     </ul>
-                    <div class="side-banner"><img src="<?=base_url()?>assets_frontend/images/top-banner.jpg" alt="Flash Sale" class="img-responsive"></div>
+                    <div class="side-banner"></div>
                   </div>
                 </div>
               </div>
@@ -553,15 +491,15 @@
               <div class="search_cart_block">
                 <div class="search-box hidden-xs">
                   <form id="search_mini_form" action="#" method="get">
-                    <input id="search" type="text" name="q" value="" class="searchbox" placeholder="Search entire store here..." maxlength="128">
-                    <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span class="hidden-sm">Search</span><i class="fa fa-search hidden-xs hidden-lg hidden-md"></i></button>
+                    <input id="search" type="text" name="q" value="" class="searchbox" placeholder="Nhập từ tìm kiếm" maxlength="128">
+                    <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span class="hidden-sm">Tìm kiếm</span><i class="fa fa-search hidden-xs hidden-lg hidden-md"></i></button>
                   </form>
                 </div>
                 <div class="right_menu">
                   <div class="menu_top">
                     <div class="top-cart-contain pull-right">
                       <div class="mini-cart">
-                        <div class="basket"><a class="basket-icon" href="#"><i class="fa fa-shopping-basket"></i> Shopping Cart <span>3</span></a>
+                        <div class="basket"><a class="basket-icon" href="#"><i class="fa fa-shopping-basket"></i>Giỏ hàng <span>3</span></a>
                           <div class="top-cart-content">
                             <div class="block-subtitle">
                               <div class="top-subtotal">3 items, <span class="price">$399.49</span></div>

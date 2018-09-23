@@ -41,7 +41,7 @@
                     <thead>
                         <tr role="row">
                             <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="id">ID</th>
-                            <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="title">Tiêu Đề</th>
+                            <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="tieude">Tiêu Đề</th>
                             <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="noidung">Nội dung</th>
                             <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="anh">Ảnh Tiêu Đề</th>
                             <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" style="width: 117px;">Hoạt Động</th>
@@ -50,10 +50,10 @@
                     <tbody> 
                       <?php foreach ( $tintuc as $item =>$value ) {?>
                     <tr role="row" class="odd">
-                        <td class="sorting_1"<?php echo $value["id"] ?>></td>
-                        <td class="sorting_1"<?php echo $value["tieude"] ?>></td>
-                        <td class="sorting_1"<?php echo $value["noidung"] ?>></td>
-                        <td class="sorting_1"<?php echo $value["anh_tieude"] ?>></td>
+                        <td class="sorting_1"><?php echo $value["id"] ?></td>
+                        <td class="sorting_1"><?php echo $value["tieude"] ?></td>
+                        <td class="sorting_1"><?php echo $value["noidung"] ?></td>
+                       <td class="sorting_1"><?php echo $value["anh"] ?></td> 
                         <td>
                             <a href="<?=base_url("admin_DA/tintuc/edit/").$value['id']?>">Sửa</a> ||
                             <a href="<?=base_url("admin_DA/tintuc/delete/{$value['id']}")?>">Xóa</a> 

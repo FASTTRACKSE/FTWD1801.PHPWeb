@@ -41,6 +41,7 @@
                     <thead>
                       <tr role="row">
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 337px;" name="id">id</th>
+                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="tensanpham" value="">tên sp</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="image" value="">image</th>
                       <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 117px;"><a href="">hoạt động</th>
                       </tr>
@@ -50,6 +51,7 @@
                     <tr role="row" class="odd">
 
                         <td class="sorting_1"><?php echo $item["id"] ?></td>
+                        <td><?php echo $item["tensanpham"] ?></td>
                         <td ><img src="../../../uploads/<?= $item['image']?>"></td>                 
                         <td>
                             <a href="<?=base_url("index.php/admin_DA/hinhanh/edit/").$item['id']?>">sửa</a> ||

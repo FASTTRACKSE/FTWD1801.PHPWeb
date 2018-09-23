@@ -31,15 +31,15 @@
         <form action="" method="POST">
           <div class="form-group">
             <label for="company" class=" form-control-label">Tiêu Đề</label>
-            <textarea type="text" id="title" class="form-control ckeditor" name="title" value="<?= $value['tieude']?>"></textarea>
+            <textarea type="text" id="tieude" class="form-control ckeditor" name="tieude" value="<?=$value['tieude']?>"></textarea>
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Ckfinder</label>
-            <textarea type="text" id="ckfinder" class="form-control ckeditor" name="ckfinder" value="<?= $value['noidung']?>"></textarea>
+            <textarea type="text" id="noidung" class="form-control ckeditor" name="noidung" value="<?= $value['noidung']?>"></textarea>
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Ảnh Tiêu Đề</label>
-            <textarea type="text" id="anh" class="form-control ckeditor" name="anh" value="<?= $value['anh_tieude']?>"></textarea>
+            <textarea type="text" id="anh" class="form-control ckeditor" name="anh" value="<?= $value['anh']?>"></textarea>
           </div>
           <script>
             var editor = CKEDITOR.replace('ckfinder', {

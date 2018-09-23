@@ -9,17 +9,17 @@ class Tintuc_model extends CI_Model {
 		parent::__construct();
 		$this->load->database();
 	}
-	public function get_tinh() {
+	public function get_tintuc() {
 			$this->db->select("*");
-			$rs = $this->db->get("tintuc");
-			return $rs->result_array();
+			$tintuc = $this->db->get("tintuc",3,1);
+			return $tintuc->result_array();
 	}
 	public function count_rows($search){
 		$this->db->where("id like '%$search%'");
 		return $this->db->count_all_results('tintuc'); 
 	}
 	public function get_search($search,$cur_page,$per_page){
-		$this->db->where("noidung like '%$search%'");
+		$this->db->where("tieude like '%$search%'");
 		return $this->db->get('tintuc',$per_page,$cur_page)->result_array();
 	}
 

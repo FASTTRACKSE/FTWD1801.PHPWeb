@@ -32,6 +32,10 @@
                             <label for="company" class=" form-control-label">id</label>
                             <input type="text" id="company" class="form-control" name="id" value="<?=$item["id"]?>">
                         </div>
+                        <div class="form-group"  >
+                            <label for="company" class=" form-control-label">tên sp</label>
+                            <input type="text" id="company" class="form-control" name="tensanpham" value="<?=$item["tensanpham"]?>">
+                        </div>
                         <div class="form-group">
                             <label for="vat" class=" form-control-label" >image</label>
                             <input type="file" id="vat"  class="form-control" name="image" value="<?=$item["image"]?>">

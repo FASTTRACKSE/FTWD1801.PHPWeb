@@ -1,16 +1,7 @@
 <!-- Footer -->
-  <footer>
+  <footer style="background-color: black;">
     <div class="footer-inner">
       <div class="news-letter">
-        <div class="container">
-          <div class="heading text-center">
-            <h2>Just Subscribe Now!</h2>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. Sed feugiat, tellus vel tristique posuere.</span> </div>
-          <form>
-            <input type="email" placeholder="Enter your email address" required>
-            <button type="submit">Send me</button>
-          </form>
-        </div>
       </div>
       <div class="container">
         <div class="row">

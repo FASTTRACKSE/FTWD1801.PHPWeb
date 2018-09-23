@@ -1,4 +1,4 @@
-<form method="POST" class="form-horizontal form-material">
+<form method="POST" class="form-horizontal form-material" >
     <div class="breadcrumbs">
         <div class="col-sm-4">
             <div class="page-header float-left">
@@ -30,11 +30,11 @@
                 <div class="card-body card-block">
                     <div class="form-group">
                         <label class=" form-control-label">Tiêu Đề</label>
-                        <textarea type="text" id="titile" class="form-control ckeditor" name="title"></textarea>
+                        <textarea type="text" id="tieude" class="form-control ckeditor" name="tieude"></textarea>
                     </div>
                     <div class="form-group">
                         <label class=" form-control-label">Nội dung</label>
-                        <textarea type="text" id="ckfinder" class="form-control ckeditor" name="ckfinder"></textarea>
+                        <textarea type="text" id="noidung" class="form-control ckeditor" name="noidung"></textarea>
                     </div>
                     <div class="form-group">
                         <label class=" form-control-label">Ảnh Tiêu Đề</label>

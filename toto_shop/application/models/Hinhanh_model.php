@@ -9,11 +9,11 @@
 		}
 
 		public function get_hinhanh() {
-			$this->load->database();
 			$this->db->select("*");
 			//$this->db->where("id_contact>=",$number);
 			$rs = $this->db->get("list_image");
 			return $rs->result_array();
+			// print_r($rs);
 
 		}
 		public function count_rows($search){
@@ -21,7 +21,7 @@
 			return $this->db->count_all_results('list_image'); 
 		}
 		public function get_search($search,$cur_page,$per_page){
-			$this->db->where("image like '%$search%'");
+			$this->db->where("tensanpham like '%$search%'");
 			return $this->db->get($this->table,$per_page,$cur_page)->result_array();
 		}
 		public function edit ($arr,$id){

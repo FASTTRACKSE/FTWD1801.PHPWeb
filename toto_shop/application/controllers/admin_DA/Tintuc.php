@@ -38,14 +38,27 @@ class Tintuc extends MY_Controller {
 			$data["content"]="admin_DA/tintuc/add";
 			$this->load->model("Tintuc_model");
 			$this->load->library('form_validation');
-			$this->form_validation->set_rules("ckfinder","Nội dung","required");
+			$this->form_validation->set_rules("tieude","tiêu đề","required");
 			if($this->form_validation->run()==false){
 				$this->load->view("templates/admin_DA/master",$data);	
 			}else{
+				$config['upload_path'] = 'uploads';
+        		$config['allowed_types'] = 'gif|jpg|png';
+        		$config['file_name'] = $_FILES['anh']['name'];
+
+        		$this->load->library('upload', $config);
+        		$this->upload->initialize($config);
+
+        		$this->upload->do_upload('anh');
+          		$uploadData = $this->upload->data();
+          		$anh = $uploadData['file_name'];
+
+          		$tieude = $this->input->post('tieude');
+				$noidung = $this->input->post('noidung');
 				$data= array(
-					'tieude'=>$this->input->post("title"),
-					'noidung'=>$this->input->post("ckfinder"),
-					'anh_tieude'=>$this->input->post("anh")
+					'tieude'=>$this->input->post("tieude"),
+					'noidung'=>$this->input->post("noidung"),
+					'anh'=>$this->input->post("anh")
 				);
 				$rs=$this->Tintuc_model->add($data);
 				if($rs) {
@@ -79,15 +92,28 @@ class Tintuc extends MY_Controller {
 		$this->load->library('form_validation');
 		$item= $this->Tintuc_model->get_info($id);
 		$data['item']=$item;
-		$this->form_validation->set_rules("ckfinder","Nội dung","required");
+		$this->form_validation->set_rules("tieude","tiêu đề","required");
 		if($this->form_validation->run()==FALSE){
 			$this->load->view("templates/admin_DA/master",$data);
 		}else{
-		$data=array(
-			'tieude'=>$this->input->post("title"),
-			'noidung'=>$this->input->post("ckfinder"),
-			'anh_tieude'=>$this->input->post("anh")
-			);
+				$config['upload_path'] = 'uploads';
+        		$config['allowed_types'] = 'gif|jpg|png';
+        		$config['file_name'] = $_FILES['anh']['name'];
+
+        		$this->load->library('upload', $config);
+        		$this->upload->initialize($config);
+
+        		$this->upload->do_upload('anh');
+          		$uploadData = $this->upload->data();
+          		$anh = $uploadData['file_name'];
+
+          		$tieude = $this->input->post('tieude');
+				$noidung = $this->input->post('noidung');
+				$data= array(
+					'tieude'=>$this->input->post("tieude"),
+					'noidung'=>$this->input->post("noidung"),
+					'anh'=>$this->input->post("anh")
+				);
 		$rs = $this->Tintuc_model->edit($data,$id);
 		if($rs) {
 			$this->session->set_flashdata("msg",'sửa thành công');

@@ -26,6 +26,10 @@
                         <strong>thêm thông tin</strong>
                       </div>
                       <div class="card-body card-block">
+                        <div class="form-group">
+                            <label for="company" class=" form-control-label" >tên sp</label>
+                            <input type="text" id="company" placeholder="" class="form-control" name="tensanpham">
+                        </div>
                       <div class="form-group">
                             <label for="company" class=" form-control-label" >image</label>
                             <input type="file" id="company" placeholder="" class="form-control" name="image">
