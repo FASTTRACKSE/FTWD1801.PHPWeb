@@ -43,7 +43,9 @@ class Tintuc extends MY_Controller {
 				$this->load->view("templates/admin_DA/master",$data);	
 			}else{
 				$data= array(
+					'tieude'=>$this->input->post("title"),
 					'noidung'=>$this->input->post("ckfinder"),
+					'anh_tieude'=>$this->input->post("anh")
 				);
 				$rs=$this->Tintuc_model->add($data);
 				if($rs) {
@@ -81,9 +83,10 @@ class Tintuc extends MY_Controller {
 		if($this->form_validation->run()==FALSE){
 			$this->load->view("templates/admin_DA/master",$data);
 		}else{
-		$ckfinder = $this->input->post('ckfinder');
 		$data=array(
-			'noidung'=>$ckfinder,
+			'tieude'=>$this->input->post("title"),
+			'noidung'=>$this->input->post("ckfinder"),
+			'anh_tieude'=>$this->input->post("anh")
 			);
 		$rs = $this->Tintuc_model->edit($data,$id);
 		if($rs) {
