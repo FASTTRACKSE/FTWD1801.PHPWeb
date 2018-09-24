@@ -116,9 +116,6 @@ class Home extends CI_Controller {
 		$data['items'] = $this->cart->contents();
 		$data['content']="home/shopping_cart";
 		$this->load->view("templates/frontend/master",$data);
-		// echo "<pre>";
-		// print_r($rs);
-		// echo "</pre>";die();
 	}
 	public function insert($id_sp){
         //Show thong tin chi tiet gio hang
@@ -146,11 +143,11 @@ class Home extends CI_Controller {
 		redirect('Home/shopping_cart');
     }
 
-    public function deleteAll()
-	{
-		$this->cart->destroy();
-		redirect('Home/shopping_cart');
-	}
+ //    public function deleteAll()
+	// {
+	// 	$this->cart->destroy();
+	// 	redirect('Home/shopping_cart');
+	// }
 
 	public function updateCart()
 	{
@@ -160,7 +157,15 @@ class Home extends CI_Controller {
 			$this->cart->update(array('rowid' => $item['rowid'], 'qty' => $_POST['qty'.$i]));
 			$i++;
 		}
-		$this->load->view('home/shopping_cart');
+		$data['items'] = $this->cart->contents();
+		$data['content']="home/shopping_cart";
+		$this->load->view("templates/frontend/master",$data);
+	}
+
+	public function checkout()
+	{
+		$data['content']="home/checkout";
+		$this->load->view("templates/frontend/master",$data);
 	}
 }
 	

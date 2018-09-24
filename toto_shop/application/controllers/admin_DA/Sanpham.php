@@ -107,7 +107,6 @@
 					'rating'=>$rating,
 					'gia'=>$gia,
 					'hinhanh'=>$hinhanh
-					
 				);
 				$rs=$this->Sanpham_model->add($data);
 				if($rs) {
