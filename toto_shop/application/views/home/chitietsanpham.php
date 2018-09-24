@@ -40,9 +40,9 @@
   </div>
 </div>
 </div>
-
+<div class="container">
 <h2 style="color: #9E9EBF; margin-top: 250px;" >Chi Tiết Sản Phẩm</h2>
-<img src="http://cdn.nhanh.vn/cdn/store/7136/psCT/20180802/8466611/THUN_NAM_088002BL_(thun_nam_2_(2)).jpg" width="800px;">
+<img src="http://cdn.nhanh.vn/cdn/store/7136/psCT/20180802/8466611/THUN_NAM_088002BL_(thun_nam_2_(2)).jpg" width="800px;"></div>
 <br>
   <section class="main-container">
     <div class="container">

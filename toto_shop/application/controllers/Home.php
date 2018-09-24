@@ -12,12 +12,12 @@ class Home extends CI_Controller {
 		$this->load->model("Home_model");
 	}
 	public function index() {
-		$rs=$this->Sanpham_model->get_sanpham();
+		$rs=$this->Sanpham_model->get_sanphamtrangchu();
 		$rs2=$this->Hinhanh_model->get_hinhanh();
 		$rs1=$this->Sanpham_model->get_sanpham1();
 		$sanphamhangdau=$this->Sanpham_model->get_sanphamhangdau();
 		$tintuc=$this->Tintuc_model->get_tintuc();
-		$data["sanpham"]=$rs;
+		$data["sanphamtrangchu"]=$rs;
 		$data["hinhanh"]=$rs2;
 		$data["sanpham1"]=$rs1;
 		$data["sanphamhangdau"]=$sanphamhangdau;
@@ -50,16 +50,6 @@ class Home extends CI_Controller {
 			$data["donam"]=$rs;
 			$data['donam']=$this->Sanpham_model->get_search($search,$cur_page,$config['per_page']);
 			$this->load->view("templates/frontend/master",$data);
-
-
-		// $this->load->model("Sanpham_model");
-		// $rs=$this->Sanpham_model->get_donam();
-		// $data["donam"]=$rs;
-		// $data['content']="home/donam";
-		// $this->load->view("templates/frontend/master",$data);
-		// echo "<pre>";
-		// print_r($rs);
-		// echo "</pre>";die();
 	}
 
 	public function chitietsanpham(){
@@ -98,17 +88,390 @@ class Home extends CI_Controller {
 			$data["donu"]=$rs;
 			$data['donu']=$this->Sanpham_model->get_search2($search,$cur_page,$config['per_page']);
 			$this->load->view("templates/frontend/master",$data);
-
-
-		$this->load->model("Sanpham_model");
-		$rs=$this->Sanpham_model->get_donam();
-		$data["donam"]=$rs;
-		$data['content']="home/donam";
-		$this->load->view("templates/frontend/master",$data);
 		// echo "<pre>";
 		// print_r($rs);
 		// echo "</pre>";die();
 	}
+	public function aothunnam(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/aothunnam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_aothunnam();
+			$data['content']="home/aothunnam";
+			$data["aothunnam"]=$rs;
+			$data['aothunnam']=$this->Sanpham_model->get_search3($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function aosominam(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/aosominam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_aosominam();
+			$data['content']="home/aosominam";
+			$data["aosominam"]=$rs;
+			$data['aosominam']=$this->Sanpham_model->get_search4($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quanjean_nam(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quanjean_nam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quanjean_nam();
+			$data['content']="home/quanjean_nam";
+			$data["quanjean_nam"]=$rs;
+			$data['quanjean_nam']=$this->Sanpham_model->get_search5($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quankaki_nam(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quankaki_nam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quankaki_nam();
+			$data['content']="home/quankaki_nam";
+			$data["quankaki_nam"]=$rs;
+			$data['quankaki_nam']=$this->Sanpham_model->get_search6($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quanjogger_nam(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quanjogger_nam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quanjogger_nam();
+			$data['content']="home/quanjogger_nam";
+			$data["quanjogger_nam"]=$rs;
+			$data['quanjogger_nam']=$this->Sanpham_model->get_search7($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quanshort_nam(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quanshort_nam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quanshort_nam();
+			$data['content']="home/quanshort_nam";
+			$data["quanshort_nam"]=$rs;
+			$data['quanshort_nam']=$this->Sanpham_model->get_search8($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function aokieu_nu(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/aokieu_nu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_aokieu_nu();
+			$data['content']="home/aokieu_nu";
+			$data["aokieu_nu"]=$rs;
+			$data['aokieu_nu']=$this->Sanpham_model->get_search9($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function dam_nu(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/dam_nu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_dam_nu();
+			$data['content']="home/dam_nu";
+			$data["dam_nu"]=$rs;
+			$data['dam_nu']=$this->Sanpham_model->get_search10($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function chan_vay(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/chan_vay?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_chan_vay();
+			$data['content']="home/chan_vay";
+			$data["chan_vay"]=$rs;
+			$data['chan_vay']=$this->Sanpham_model->get_search11($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function somi_nu(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/somi_nu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_somi_nu();
+			$data['content']="home/somi_nu";
+			$data["somi_nu"]=$rs;
+			$data['somi_nu']=$this->Sanpham_model->get_search12($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quanjean_nu(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quanjean_nu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quanjean_nu();
+			$data['content']="home/quanjean_nu";
+			$data["quanjean_nu"]=$rs;
+			$data['quanjean_nu']=$this->Sanpham_model->get_search13($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quanshort_nu(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quanshort_nu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quanshort_nu();
+			$data['content']="home/quanshort_nu";
+			$data["quanshort_nu"]=$rs;
+			$data['quanshort_nu']=$this->Sanpham_model->get_search14($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+	public function quanthun_nu(){
+			$this->load->model("Sanpham_model");
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/quanthun_nu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$rs=$this->Sanpham_model->get_quanthun_nu();
+			$data['content']="home/quanthun_nu";
+			$data["quanthun_nu"]=$rs;
+			$data['quanthun_nu']=$this->Sanpham_model->get_search15($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+			// echo "<pre>";
+			// print_r($rs);
+			// echo "</pre>";die();
+	}
+
+
+
 	public function shopping_cart()
 	{	
 		$rs=$this->Sanpham_model->get_sanphamquantam();

@@ -51,27 +51,27 @@
                         <div class="wrap-popup column1">
                           <div class="popup">
                             <ul class="nav">
-                              <li><a href="index.html">ÁO THUN</a></li>
-                              <li><a href="version2/index.html">ÁO SƠ MI</a></li>
-                              <li><a href="version2/index.html">QUẦN JEAN</a></li>
-                              <li><a href="version2/index.html">QUẦN KAKI</a></li>
-                              <li><a href="version2/index.html">QUẦN JOGGER</a></li>
-                              <li><a href="version2/index.html">QUẦN SHORT</a></li>
+                              <li><a href="<?=base_url()?>home/aothunnam">ÁO THUN</a></li>
+                              <li><a href="<?=base_url()?>home/aosominam">ÁO SƠ MI</a></li>
+                              <li><a href="<?=base_url()?>home/quanjean_nam">QUẦN JEAN</a></li>
+                              <li><a href="<?=base_url()?>home/quankaki_nam">QUẦN KAKI</a></li>
+                              <li><a href="<?=base_url()?>home/quanjogger_nam">QUẦN JOGGER</a></li>
+                              <li><a href="<?=base_url()?>home/quanshort_nam">QUẦN SHORT</a></li>
                             </ul>
                           </div>
                         </div>
                       </li>
-                    <li><a href="#">ĐỒ  NỮ</a>
+                    <li><a href="">ĐỒ  NỮ</a>
                         <div class="wrap-popup column1">
                           <div class="popup">
                             <ul class="nav">
-                              <li><a href="index.html">ÁO KIỂU</a></li>
-                              <li><a href="version2/index.html">ĐẦM NỮ</a></li>
-                              <li><a href="version2/index.html">CHÂN VÁY</a></li>
-                              <li><a href="version2/index.html">ÁO SƠ MI</a></li>
-                              <li><a href="version2/index.html">QUẦN JEAN</a></li>
-                              <li><a href="version2/index.html">QUẦN SHORT</a></li>
-                              <li><a href="version2/index.html">QUẦN THUN</a></li>
+                              <li><a href="<?=base_url()?>home/aokieu_nu">ÁO KIỂU</a></li>
+                              <li><a href="<?=base_url()?>home/dam_nu">ĐẦM NỮ</a></li>
+                              <li><a href="<?=base_url()?>home/chan_vay">CHÂN VÁY</a></li>
+                              <li><a href="<?=base_url()?>home/somi_nu">ÁO SƠ MI</a></li>
+                              <li><a href="<?=base_url()?>home/quanjean_nu">QUẦN JEAN</a></li>
+                              <li><a href="<?=base_url()?>home/quanshort_nu">QUẦN SHORT</a></li>
+                              <li><a href="<?=base_url()?>home/quanthun_nu">QUẦN THUN</a></li>
                             </ul>
                           </div>
                         </div>

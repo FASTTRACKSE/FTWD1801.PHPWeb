@@ -54,7 +54,7 @@
                 </div>
                 <div id="featured-slider" class="product-flexslider hidden-buttons">
                   <div class="slider-items slider-width-col4 products-grid">
-                    <?php   foreach ($sanpham as $key => $value) { ?>
+                    <?php   foreach ($sanphamtrangchu as $key => $value) { ?>
                     <div class="item">
                       <div class="item-inner">
                         <div class="item-img">
@@ -129,10 +129,13 @@
                               </div>
                             </div>
                             <div class="actions">
-                              <div class="add_cart">
-                                <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart"></i> Add to Cart</span></button>
+                                <div class="add_cart">
+                                  <a href="<?=base_url()?>Home/insert/<?php echo $value['id_sp']?>">
+                                    <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart">Đặt Hàng</i></span>
+                                    </button>
+                                  </a>
+                                </div>
                               </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -177,10 +180,13 @@
                               </div>
                             </div>
                             <div class="actions">
-                              <div class="add_cart">
-                                <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart"></i> Add to Cart</span></button>
+                                <div class="add_cart">
+                                  <a href="<?=base_url()?>Home/insert/<?php echo $value['id_sp']?>">
+                                    <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart">Đặt Hàng</i></span>
+                                    </button>
+                                  </a>
+                                </div>
                               </div>
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -191,27 +197,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="jtv-latest-blog">
-            <div class="jtv-new-title">
-              <h2>TIN TỨC</h2>
-            </div>
-            <div class="row">
-              <div class="blog-outer-container">
-                <div class="blog-inner">
-                  <?php foreach ($tintuc as $key => $value) { ?>
-                  <div class="col-xs-12 col-sm-4 blog-preview_item">
-                    <div class="entry-thumb jtv-blog-img-hover"> <a href="blog_single_post.html"><img src="../../../uploads/<?=$value['anh']?>"></a></div>
-                    <h4 class="blog-preview_title"><a href="blog_single_post.html"><?=$value['tieude']?></a></h4>
-                    <div class="blog-preview_info">
-                      <div class="blog-preview_desc">xem thêm ></div>
-                    </div>
-                  </div>
-                  <?php } ?>
-                 
-                </div>
-              </div>
-            </div>
-          </div> -->
           <div class="jtv-trending-products">
             <div class="slider-items-products">
               <div class="jtv-new-title">

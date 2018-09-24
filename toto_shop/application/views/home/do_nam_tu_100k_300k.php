@@ -22,7 +22,7 @@
                 <ul>
                   <li style="width: 160px;"><a href="#">Mức chọn<span class="right-arrow"></span></a>
                     <ul>
-                      <li><a href="<?=base_url()?>home/do_nam_duoi_100k">Dưới 100k</a></li>
+                      <li><a href="#">Dưới 100k</a></li>
                       <li><a href="#">Từ 100k-300k</a></li>
                       <li><a href="#">Từ 300k-500k</a></li>
                       <li><a href="#">Từ 500k-1000k</a></li>
@@ -34,7 +34,7 @@
             </div>
             <div class="category-products">
               <ul class="products-grid">
-                <?php foreach ($donam as $key => $value) {?>
+                <?php foreach ($do_nam_tu_100k_300k as $key => $value) {?>
                 <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <div class="item-inner">
                     <div class="item-img">
@@ -75,7 +75,7 @@
               </ul>
 
             </div>
-            <?php echo $this->pagination->create_links(); ?> 
+           
           </article>
         </div>
       </div>
