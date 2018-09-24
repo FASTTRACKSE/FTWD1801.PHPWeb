@@ -3,7 +3,7 @@
     margin-left: 400px;
   }
 </style>
-<h5 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href="<?=base_url()?>home/donam"> ĐỒ NAM </a></h5>
+<h5 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href="<?=base_url()?>home/donam"> ĐỒ NỮ </a></h5>
 <br><br>
 <div class="main-container col1-layout">
     <div class="container">
@@ -11,7 +11,7 @@
         <div class="col-sm-12 col-xs-12">
           <article class="col-main">
             <div class="page-title">
-              <h2>ĐỒ NAM</h2>
+              <h2>ĐỒ NỮ</h2>
             </div>
             <div class="toolbar">
               <div class="sorter">
@@ -30,11 +30,11 @@
                   </li>
                 </ul>
                  </div> 
-               
+              
             </div>
             <div class="category-products">
               <ul class="products-grid">
-                <?php foreach ($donam as $key => $value) {?>
+                <?php foreach ($donu as $key => $value) {?>
                 <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
                   <div class="item-inner">
                     <div class="item-img">
@@ -73,9 +73,8 @@
                 </li>
                <?php } ?>
               </ul>
-
             </div>
-            <?php echo $this->pagination->create_links(); ?> 
+             <?php echo $this->pagination->create_links(); ?> 
           </article>
         </div>
       </div>

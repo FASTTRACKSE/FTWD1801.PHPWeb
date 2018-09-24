@@ -21,15 +21,23 @@
 			return $sanphamhangdau->result_array();
 		}
 		public function get_chitietsanpham() {
-			$chitietsanpham=$this->db->get("sanpham",1,20);
-			return $chitietsanpham->row_array();
+			$rs=$this->db->get("sanpham",1,20);
+			return $rs->row_array();
 		}
 		public function get_sanphamcungdanhmuc() {
 			$this->db->where("loai_sp=7");
-			$sanphamcungdanhmuc=$this->db->get("sanpham");
-			return $sanphamcungdanhmuc->result_array();
+			$rs=$this->db->get("sanpham");
+			return $rs->result_array();
 		}
 		public function get_donam() {
+			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
+			$this->db->where("gioitinh","nam");
+			$rs=$this->db->get("sanpham");
+			return $rs->result_array();
+		}
+		public function get_donu() {
+			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
+			$this->db->where("gioitinh","nu");
 			$rs=$this->db->get("sanpham");
 			return $rs->result_array();
 		}
@@ -42,6 +50,14 @@
 			return $this->db->count_all_results('sanpham'); 
 		}
 		public function get_search($search,$cur_page,$per_page){
+			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
+			$this->db->where("gioitinh","nam");
+			$this->db->where("tensp like '%$search%'");
+			return $this->db->get($this->table,$per_page,$cur_page)->result_array();
+		}
+		public function get_search2($search,$cur_page,$per_page){
+			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
+			$this->db->where("gioitinh","nu");
 			$this->db->where("tensp like '%$search%'");
 			return $this->db->get($this->table,$per_page,$cur_page)->result_array();
 		}

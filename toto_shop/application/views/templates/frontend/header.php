@@ -41,8 +41,8 @@
                         <div class="wrap-popup column1">
                           <div class="popup">
                             <ul class="nav">
-                              <li><a href="index.html">NAM</a></li>
-                              <li><a href="version2/index.html">NỮ</a></li>
+                              <li><a href="<?=base_url()?>home/donam">NAM</a></li>
+                              <li><a href="<?=base_url()?>home/donu">NỮ</a></li>
                             </ul>
                           </div>
                         </div>
@@ -172,7 +172,7 @@
               <div class="search_cart_block">
                 <div class="search-box hidden-xs">
                   <form id="search_mini_form" action="#" method="get">
-                    <input id="search" type="text" name="q" value="" class="searchbox" placeholder="Nhập từ tìm kiếm" maxlength="128">
+                    <input id="search" type="text" name="q" value="<?php echo $this->input->get("search") ?>" class="searchbox" placeholder="Nhập từ tìm kiếm" maxlength="128">
                     <button type="submit" title="Search" class="search-btn-bg" id="submit-button"><span class="hidden-sm">Tìm kiếm</span><i class="fa fa-search hidden-xs hidden-lg hidden-md"></i></button>
                   </form>
                 </div>
@@ -180,7 +180,7 @@
                   <div class="menu_top">
                     <div class="top-cart-contain pull-right">
                       <div class="mini-cart">
-                        <div class="basket"><a class="basket-icon" href="#"><i class="fa fa-shopping-basket"></i>Giỏ hàng</a>
+                        <div class="basket"><a class="basket-icon" href="<?=base_url()?>home/shopping_cart"><i class="fa fa-shopping-basket"></i>Giỏ hàng</a>
                           <div class="top-cart-content">
                             <ul class="mini-products-list" id="cart-sidebar">
                               <li class="item">

@@ -11,7 +11,7 @@
     margin-left: 400px;
   }
 </style>
-<h4 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href=""> ÁO THUN </a>/<a href=""> ÁO THUN TAY NGẮN</a></h4>
+<h5 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href=""> ÁO THUN </a>/<a href=""> ÁO THUN TAY NGẮN</a></h5>
 <div class="container" >
 <div class="content">
 <br>
@@ -31,7 +31,13 @@
       <option value="XL">XL</option>
     </select>
   </b></h4><br>
-   <button type="button" class="btn btn-danger">Đặt hàng</button>
+  <div class="add_cart">
+      <a href="<?=base_url()?>Home/insert/<?php echo $chitietsanpham['id_sp']?>">
+      <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart">Đặt Hàng</i></span>
+      </button>
+      </a>
+      </div>
+  </div>
 </div>
 </div>
 

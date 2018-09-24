@@ -25,6 +25,90 @@ class Home extends CI_Controller {
 		$data['content']="home/index";
 		$this->load->view("templates/frontend/master",$data);
 	}
+	public function donam(){
+			$this->load->model("Sanpham_model");
+			$rs=$this->Sanpham_model->get_donam();
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/donam?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$data['content']="home/donam";
+			$data["donam"]=$rs;
+			$data['donam']=$this->Sanpham_model->get_search($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+
+
+		// $this->load->model("Sanpham_model");
+		// $rs=$this->Sanpham_model->get_donam();
+		// $data["donam"]=$rs;
+		// $data['content']="home/donam";
+		// $this->load->view("templates/frontend/master",$data);
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>";die();
+	}
+
+	public function chitietsanpham(){
+		$rs=$this->Sanpham_model->get_chitietsanpham();
+		$rs1=$this->Sanpham_model->get_sanphamcungdanhmuc();
+		$data["chitietsanpham"]=$rs;
+		$data["sanphamcungdanhmuc"]=$rs1;
+		$data['content']="home/chitietsanpham";
+		$this->load->view("templates/frontend/master",$data);
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>";die();
+	}
+	public function donu(){
+		$this->load->model("Sanpham_model");
+			$rs=$this->Sanpham_model->get_donu();
+			$cur_page=$this->input->get("per_page"); 
+			$this->load->library("pagination");
+			$search=$this->input->get("search");
+			$config['base_url']=base_url("home/donu?search=$search");
+			$config['total_rows']=$this->Sanpham_model->count_rows($search);
+			$config['per_page']=12;
+			$config['page_query_string']=TRUE;
+			$config['full_tag_open']="<ul class='pagination'>";
+			$config['full_tag_close']="</ul>";
+			$config['first_tag_open']="<li class='pagination_button'>";
+			$config['first_tag_close']="</li>";
+			$config['last_tag_open']="<li class='pagination_button'>";
+			$config['last_tag_close']="</li>";
+			$config['num_tag_open']=$config['prev_tag_open']=$config['next_tag_open']="<li class='pagination_button'>";
+			$config['num_tag_close']=$config['prev_tag_close']=$config['next_tag_close']="</li>";
+			$config['cur_tag_open']="<li class='pagination_button active'><a href='#'>";
+			$config['cur_tag_close']="</a></li>";
+			$this->pagination->initialize($config);
+			$data['content']="home/donu";
+			$data["donu"]=$rs;
+			$data['donu']=$this->Sanpham_model->get_search2($search,$cur_page,$config['per_page']);
+			$this->load->view("templates/frontend/master",$data);
+
+
+		$this->load->model("Sanpham_model");
+		$rs=$this->Sanpham_model->get_donam();
+		$data["donam"]=$rs;
+		$data['content']="home/donam";
+		$this->load->view("templates/frontend/master",$data);
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>";die();
+	}
 	public function shopping_cart()
 	{	
 		$rs=$this->Sanpham_model->get_sanphamquantam();
