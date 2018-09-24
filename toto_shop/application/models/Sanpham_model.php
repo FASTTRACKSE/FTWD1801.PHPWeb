@@ -20,7 +20,23 @@
 			$sanphamhangdau = $this->db->get("sanpham",8,127);
 			return $sanphamhangdau->result_array();
 		}
-
+		public function get_chitietsanpham() {
+			$chitietsanpham=$this->db->get("sanpham",1,20);
+			return $chitietsanpham->row_array();
+		}
+		public function get_sanphamcungdanhmuc() {
+			$this->db->where("loai_sp=7");
+			$sanphamcungdanhmuc=$this->db->get("sanpham");
+			return $sanphamcungdanhmuc->result_array();
+		}
+		public function get_donam() {
+			$rs=$this->db->get("sanpham");
+			return $rs->result_array();
+		}
+		public function get_sanphamquantam() {
+			$rs=$this->db->get("sanpham",8,33);
+			return $rs->result_array();
+		}
 		public function count_rows($search){
 			$this->db->where("id_sp like '%$search%'");
 			return $this->db->count_all_results('sanpham'); 

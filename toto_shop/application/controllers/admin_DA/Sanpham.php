@@ -43,6 +43,7 @@
 			}else{
 				$tensp = $this->input->post('tensp');
 				$loai_sp = $this->input->post('loai_sp');
+				$size = $this->input->post('size');
 				$rating = $this->input->post('rating');
 				$gia = $this->input->post('gia');
 				// $hinhanh = $this->input->post('hinhanh');
@@ -60,6 +61,7 @@
 				$data=array(
 					'tensp'=>$tensp,
 					'loai_sp'=>$loai_sp,
+					'size'=>$size,
 					'rating'=>$rating,
 					'gia'=>$gia,
 					'hinhanh'=>$hinhanh
@@ -94,12 +96,14 @@
           		$hinhanh = $uploadData['file_name'];
           		$tensp = $this->input->post('tensp');
 				$loai_sp = $this->input->post('loai_sp');
+				$size = $this->input->post('size');
 				$rating = $this->input->post('rating');
 				$gia = $this->input->post('gia');
 
 				$data= array(
 					'tensp'=>$tensp,
 					'loai_sp'=>$loai_sp,
+					'size'=>$size,
 					'rating'=>$rating,
 					'gia'=>$gia,
 					'hinhanh'=>$hinhanh

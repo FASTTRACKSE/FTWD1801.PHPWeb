@@ -43,6 +43,7 @@
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 337px;" name="id_sp">id_sp</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="tensp">tensp</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="loai_sp" value="">loai_sp</th>
+                        <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="size" value="">size</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="rating" value="">rating</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="gia" value="">giá</th>
                         <th class="sorting" tabindex="0" aria-controls="bootstrap-data-table" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 148px;" name="image" value="">hình ảnh</th>
@@ -57,6 +58,21 @@
                         <td class="sorting_1"><?php echo $item["id_sp"] ?></td>
                                             <td><?php echo $item["tensp"] ?></td>
                                             <td><?php echo $item["loai_sp"] ?></td>
+                                            <td><select name="size">
+                                                <?php
+                                                    $stt_true=$stt_false="";
+                                                    if($item['size']==S){
+                                                    $stt_true="selected";
+                                                    }else{
+                                                    $stt_false="selected";
+                                                }
+                                                ?>
+                                                <option <?php echo $stt_true?> value="S">S</option>
+                                                <option <?php echo $stt_false?> value="M">M</option> 
+                                                <option <?php echo $stt_false?> value="L">L</option> 
+                                                <option <?php echo $stt_false?> value="XL">XL</option> 
+                                                </select>
+                                            </td>
                                             <td><?php echo $item["rating"] ?></td>
                                             <td><?php echo $item["gia"] ?></td>
                                             <td ><img src="../../../uploads/<?= $item['hinhanh']?>"></td>               

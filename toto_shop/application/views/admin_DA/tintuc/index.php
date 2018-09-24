@@ -53,7 +53,7 @@
                         <td class="sorting_1"><?php echo $value["id"] ?></td>
                         <td class="sorting_1"><?php echo $value["tieude"] ?></td>
                         <td class="sorting_1"><?php echo $value["noidung"] ?></td>
-                       <td class="sorting_1"><?php echo $value["anh"] ?></td> 
+                       <td class="sorting_1"><img src="../../../uploads/<?php echo $value["anh"] ?>"></td> 
                         <td>
                             <a href="<?=base_url("admin_DA/tintuc/edit/").$value['id']?>">Sửa</a> ||
                             <a href="<?=base_url("admin_DA/tintuc/delete/{$value['id']}")?>">Xóa</a> 

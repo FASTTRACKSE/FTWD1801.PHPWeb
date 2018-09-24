@@ -35,6 +35,15 @@
                             <input type="text" id="company" placeholder="loai_sp" class="form-control" name="loai_sp">
                         </div>
                         <div class="form-group">
+                            <label for="country" class=" form-control-label">size</label>
+                            <select type="text" id="country" placeholder="size" class="form-control" name="size">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                      </div>
+                        <div class="form-group">
                             <label for="company" class=" form-control-label" >rating</label>
                             <input type="text" id="company" placeholder="rating" class="form-control" name="rating">
                         </div>

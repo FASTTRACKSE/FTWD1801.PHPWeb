@@ -11,10 +11,20 @@
 		public function get_hinhanh() {
 			$this->db->select("*");
 			//$this->db->where("id_contact>=",$number);
-			$rs = $this->db->get("list_image");
+			$rs = $this->db->get("list_image",4,0);
 			return $rs->result_array();
 			// print_r($rs);
 
+		}
+		public function get_anhchitietsanpham() {
+			$this->db->select("*");
+			$chitiet = $this->db->get("list_image",1,4);
+			return $chitiet->result_array();
+		}
+		public function get_donam() {
+			$this->db->select("*");
+			$rs2 = $this->db->get("list_image",1,5);
+			return $rs2->result_array();
 		}
 		public function count_rows($search){
 			$this->db->where("id like '%$search%'");

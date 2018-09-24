@@ -27,11 +27,15 @@ class Home extends CI_Controller {
 	}
 	public function shopping_cart()
 	{	
+		$rs=$this->Sanpham_model->get_sanphamquantam();
+		$data["sanphamquantam"]=$rs;
 		$data['items'] = $this->cart->contents();
 		$data['content']="home/shopping_cart";
 		$this->load->view("templates/frontend/master",$data);
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>";die();
 	}
-
 	public function insert($id_sp){
         //Show thong tin chi tiet gio hang
         $product = $this->Home_model->getShopIdBy($id_sp);
