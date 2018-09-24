@@ -39,21 +39,10 @@
           </div>
           <div class="form-group">
             <label for="company" class=" form-control-label">Ảnh Tiêu Đề</label>
-            <textarea type="text" id="anh" class="form-control ckeditor" name="anh" value="<?= $value['anh']?>"></textarea>
+            <input type="file" id="anh" class="form-control" name="anh" value="<?= $value['anh']?>"> 
           </div>
           <script>
-            var editor = CKEDITOR.replace('ckfinder', {
-              language: 'vi',
-              filebrowserBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html',
-              filebrowserImageBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html?type=Images',
-              filebrowserFlashBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html?type=Flash',
-              filebrowserUploadUrl: '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
-              filebrowserImageUploadUrl: '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
-              filebrowserFlashUploadUrl: '../../public/admin/plugins/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
-            });
-          </script>
-          <script>
-            var editor = CKEDITOR.replace('anh', {
+            var editor = CKEDITOR.replace('noidung', {
               language: 'vi',
               filebrowserBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html',
               filebrowserImageBrowseUrl: '../../public/admin/plugins/ckfinder/ckfinder.html?type=Images',

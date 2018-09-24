@@ -92,7 +92,7 @@ class Tintuc extends MY_Controller {
 		$this->load->library('form_validation');
 		$item= $this->Tintuc_model->get_info($id);
 		$data['item']=$item;
-		$this->form_validation->set_rules("tieude","tiêu đề","required");
+		$this->form_validation->set_rules("tieude","Tiêu Đề","required");
 		if($this->form_validation->run()==FALSE){
 			$this->load->view("templates/admin_DA/master",$data);
 		}else{

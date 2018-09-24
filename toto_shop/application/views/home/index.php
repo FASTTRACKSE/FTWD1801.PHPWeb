@@ -79,7 +79,10 @@
                               </div>
                               <div class="actions">
                                 <div class="add_cart">
-                                  <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart"></i> Add to Cart</span></button>
+                                  <a href="<?=base_url()?>Home/insert/<?php echo $value['id_sp']?>">
+                                    <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart">Đặt Hàng</i></span>
+                                    </button>
+                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -195,15 +198,15 @@
             <div class="row">
               <div class="blog-outer-container">
                 <div class="blog-inner">
-                  <<?php foreach ($tintuc as $key => $value) { ?>
+                  <?php foreach ($tintuc as $key => $value) { ?>
                   <div class="col-xs-12 col-sm-4 blog-preview_item">
-                    <div class="entry-thumb jtv-blog-img-hover"> <a href="blog_single_post.html"> <img alt="Blog" src="<?=base_url()?>assets_frontend/images/blog-img1.jpg"> </a> </div>
+                    <div class="entry-thumb jtv-blog-img-hover"> <a href="blog_single_post.html"><img alt="Blog" src="uploads/<?=$value['anh']?>"></a></div>
                     <h4 class="blog-preview_title"><a href="blog_single_post.html"><?=$value['tieude']?></a></h4>
                     <div class="blog-preview_info">
                       <div class="blog-preview_desc">xem thêm ></div>
                     </div>
                   </div>
-                  <<?php } ?>
+                  <?php } ?>
                 <!--   <div class="col-xs-12 col-sm-4 blog-preview_item">
                     <div class="entry-thumb jtv-blog-img-hover"> <a href="blog_single_post.html"> <img alt="Blog" src="<?=base_url()?>assets_frontend/images/blog-img1.jpg"> </a> </div>
                     <h4 class="blog-preview_title"><a href="blog_single_post.html">CẬP NHẬT NHỮNG MẨU SWEATER CHO CHÀNG CHÀO THU</a></h4>
