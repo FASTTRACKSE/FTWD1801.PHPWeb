@@ -33,6 +33,10 @@
                             <input type="text" id="company" class="form-control" name="id" value="<?=$item["id"]?>">
                         </div>
                         <div class="form-group"  >
+                            <label for="company" class=" form-control-label">id_sp</label>
+                            <input type="text" id="company" class="form-control" name="id_sp" value="<?=$item["id_sp"]?>">
+                        </div>
+                        <div class="form-group"  >
                             <label for="company" class=" form-control-label">tên sp</label>
                             <input type="text" id="company" class="form-control" name="tensanpham" value="<?=$item["tensanpham"]?>">
                         </div>

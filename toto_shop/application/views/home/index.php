@@ -63,7 +63,7 @@
                             <div class="mask-shop-white"></div>
                             <a class="quickview-btn" href="quick-view.html"><span>Quick View</span></a> <a href="wishlist.html">
                             <div class="mask-left-shop"><i class="fa fa-heart"></i></div>
-                            </a> <a href="<?=base_url()?>home/chitietsanpham">
+                            </a> <a href="<?=base_url()?>home/chitietsanpham/<?php echo $value['id_sp'] ?>">
                             <div class="mask-right-shop"><i class="fa fa-signal"></i></div>
                             </a> </div>
                         </div>

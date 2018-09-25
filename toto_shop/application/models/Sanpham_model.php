@@ -24,10 +24,21 @@
 			$sanphamhangdau = $this->db->get("sanpham",8,127);
 			return $sanphamhangdau->result_array();
 		}
-		public function get_chitietsanpham() {
-			$rs=$this->db->get("sanpham",1,20);
+		public function get_chitietsanpham($id_sp) {
+			$this->db->where('id_sp', $id_sp);
+			$rs=$this->db->get("sanpham");
 			return $rs->row_array();
 		}
+		public function getListImage($id_sp){
+			$this->db->where('id_sp', $id_sp);
+			return $this->db->get('list_image')->row_array();			
+		}
+		// public function get_chitietsanpham() {
+		// 	$this->db->join('list_image','sanpham.id_sp=list_image.id_sp','inner');
+		// 	$rs=$this->db->get("sanpham");
+		// 	return $rs->result_array();
+
+		// }
 		public function get_sanphamcungdanhmuc() {
 			$this->db->where("loai_sp=7");
 			$rs=$this->db->get("sanpham");

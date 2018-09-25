@@ -52,9 +52,10 @@ class Home extends CI_Controller {
 			$this->load->view("templates/frontend/master",$data);
 	}
 
-	public function chitietsanpham(){
-		$rs=$this->Sanpham_model->get_chitietsanpham();
+	public function chitietsanpham($id_sp){
+		$rs=$this->Sanpham_model->get_chitietsanpham($id_sp);
 		$rs1=$this->Sanpham_model->get_sanphamcungdanhmuc();
+		$data['chitiet'] = $this->Sanpham_model->getListImage($id_sp);
 		$data["chitietsanpham"]=$rs;
 		$data["sanphamcungdanhmuc"]=$rs1;
 		$data['content']="home/chitietsanpham";
