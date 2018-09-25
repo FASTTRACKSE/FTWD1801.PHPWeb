@@ -46,13 +46,13 @@
                                 <label>Địa chỉ<em>*</em></label>
                                 <input type="text" name="diachi" class="info">
                               </div>
-                              <div class="input-box">
+                              <!-- <div class="input-box">
                                 <label>Hình Thức Thanh Toán<em>*</em></label>
                                 <select class="select-custom" data-live-search="true" name="hinhthucgiaohang">
                                   <option value="1">Giao Hàng Tận Nơi</option>
                                   <option value="2">Nhận Hàng Tại Shop</option>
                                 </select>
-                              </div>
+                              </div> -->
                               <!-- <div class="input-box">
                                 <label>Hình Thức Thanh Toán<em>*</em></label>
                                 <input type="radio" name="thanhtoan" value="1">Giao Hàng Tận Nơi

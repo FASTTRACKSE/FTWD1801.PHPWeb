@@ -488,7 +488,11 @@ class Home extends CI_Controller {
         'qty'     => 1,
         'price'   => $product->gia,
         'name'    => $product->tensp,
-        'img' => $product->hinhanh
+        'option' => array(
+        	'img'=> $product->hinhanh,
+        	'size'=>$product->size,
+        	'rating'=>$product->rating
+        	)
  		);
 			// echo "<pre>";
 			// var_dump($this->cart->insert($data));
@@ -506,18 +510,23 @@ class Home extends CI_Controller {
 		redirect('Home/shopping_cart');
     }
 
- //    public function deleteAll()
-	// {
-	// 	$this->cart->destroy();
-	// 	redirect('Home/shopping_cart');
-	// }
+    public function deleteAll()
+	{
+		$this->cart->destroy();
+		
+	}
 
 	public function updateCart()
 	{
 		$i = 1;
+
 		foreach ($this->cart->contents() as $item) 
 		{
-			$this->cart->update(array('rowid' => $item['rowid'], 'qty' => $_POST['qty'.$i]));
+			$this->cart->update(array(
+				'rowid' => $item['rowid'], 
+				'qty' => $_POST['qty'.$i],
+				 'size' => $_POST['option'.$i]['size'])
+		);
 			$i++;
 		}
 		$data['items'] = $this->cart->contents();
@@ -550,11 +559,33 @@ class Home extends CI_Controller {
 				'diachi'=>$this->input->post('diachi'),
 				'xaphuong'=>$this->input->post('xaphuong'),
 				'huyenquan'=>$this->input->post('huyenquan'),
-				'tinhthanhpho'=>$this->input->post('tinhthanhpho'),
-				'hinhthucgiaohang'=>$this->input->post('hinhthucgiaohang')
+				'tinhthanhpho'=>$this->input->post('tinhthanhpho')
 			);
 
-			$rs= $this->Home_model->addCheckOut($add);
+			$id_kh = $this->Home_model->addKhachHang($add);
+			$total = $this->cart->total();
+			$arr = array(
+				'tongtien' => $total,
+				'ngay_tao' => date('Y-m-d'),
+				'id_kh' =>$id_kh
+
+			);
+			$id_hd = $this->Home_model->addHoaDon($arr);
+			//
+			
+			foreach ($this->cart->contents() as $value) {
+				$array = array(
+					'id_hd' => $id_hd,
+					'id_sp' => $value['id'],
+					'soluong' => $value['qty'],
+					'id_size'=>$value['option']['size']
+
+
+				);
+				$this->Home_model->addHoaDonChiTiet($array);
+			};
+			//
+			$this->cart->destroy();
 			echo "thanh cong";
 			// if ($rs) {
 			// 	$this->session->set_flashdata('msg','Thêm Thành Công');

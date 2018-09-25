@@ -32,7 +32,9 @@
                           <thead>
                             <tr>
                               <th class="product-thumbnail ">Hình ảnh</th>
-                              <th class="product-name ">Thông tin sản phẩm</th>
+                              <th class="product-name ">Tên Sản Phẩm</th>
+                              <th class="product-size ">Size</th>
+                              <th class="product-rating">Rating</th>
                               <th class="product-price ">Đơn giá</th>
                               <th class="product-quantity">Số lượng</th>
                               <th class="product-subtotal ">Thành Tiền</th>
@@ -40,17 +42,25 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <!-- <?php 
+                            <?php 
                               echo "<pre>";
                               var_dump($items);
                               echo "</pre>";
-
-                             ?> -->
+                             ?>
                              <?php $i = 1; ?>
-                            <?php foreach ($items as $key => $value) { ?>
+                            <?php foreach ($items as  $value) { ?>
                             <tr class="cart_item">
-                              <td class="item-img"><a href="#"><img src="../uploads/<?=$value['img'] ?>"></a></td>
-                              <td class="item-title"><a href="#"><?php echo $value['name'] ?></a>
+                              <td class="item-img"><img src="../uploads/<?=$value['option']['img'] ?>"></td>
+                              <td class="item-title"><?php echo $value['name'] ?>
+                              </td>
+                              <td class="item-title"><select>
+                                  <option name='size' value="XL">XL</option>
+                                  <option name='size'  value="L">L</option>
+                                  <option name='size' value="M">M</option>
+                                  <option name='size' value="S">S</option>
+                                </select>
+                              </td>
+                              <td class="item-title"><?php echo $value['option']['rating'] ?>
                               </td>
                               <td class="item-price"><?php echo $value['price'] ?></td>
                               <td class="item-qty"><div class="cart-quantity">

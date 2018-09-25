@@ -208,7 +208,7 @@
                   <div class="item">
                     <div class="item-inner">
                       <div class="item-img">
-                        <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="product-detail.html"> <img alt="Product tilte is here" src="/../../../uploads/<?=$value["anh"]?>"> </a>
+                        <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="product-detail.html"> <img alt="Product tilte is here" src="uploads/<?=$value["anh"]?>"> </a>
                           <div class="new-label new-top-left">new</div>
                           <div class="mask-shop-white"></div>
                           <div class="new-label new-top-left">new</div>
