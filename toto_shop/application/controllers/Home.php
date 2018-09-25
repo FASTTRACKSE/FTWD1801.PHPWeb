@@ -64,6 +64,17 @@ class Home extends CI_Controller {
 		// print_r($rs);
 		// echo "</pre>";die();
 	}
+	public function tintuc() {
+		$rs=$this->Tintuc_model->get_tintuc2();
+		$tintuc=$this->Tintuc_model->get_tintuc();
+		$data['tintuc2']=$rs;
+		$data["tintuc"]=$tintuc;
+		$data['content']="home/tintuc";
+		$this->load->view("templates/frontend/master",$data);
+		// echo "<pre>";
+		// print_r($rs);
+		// echo "</pre>";die();
+	}
 	public function donu(){
 		$this->load->model("Sanpham_model");
 			$rs=$this->Sanpham_model->get_donu();

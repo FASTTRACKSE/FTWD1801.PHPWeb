@@ -11,8 +11,13 @@ class Tintuc_model extends CI_Model {
 	}
 	public function get_tintuc() {
 			$this->db->select("*");
-			$tintuc = $this->db->get("tintuc",3,1);
+			$tintuc = $this->db->get("tintuc",3,0);
 			return $tintuc->result_array();
+	}
+	public function get_tintuc2() {
+			$this->db->select("*");
+			$tintuc2 = $this->db->get("tintuc",1,0);
+			return $tintuc2->result_array();
 	}
 	public function count_rows($search){
 		$this->db->where("id like '%$search%'");

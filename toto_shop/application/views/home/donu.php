@@ -15,22 +15,7 @@
             </div>
             <div class="toolbar">
               <div class="sorter">
-                <div class="view-mode"> <span title="Grid" class="button button-active button-grid">&nbsp;</span><a href="shop-list-sidebar.html" title="List" class="button-list">&nbsp;</a> </div>
               </div>
-               <div id="sort-by">
-                <label class="left">Giá: </label>
-                <ul>
-                  <li style="width: 160px;"><a href="#">Mức chọn<span class="right-arrow"></span></a>
-                    <ul>
-                      <li><a href="#">Dưới 100k</a></li>
-                      <li><a href="#">Từ 100k-300k</a></li>
-                      <li><a href="#">Từ 300k-500k</a></li>
-                      <li><a href="#">Từ 500k-1000k</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                 </div> 
-              
             </div>
             <div class="category-products">
               <ul class="products-grid">
