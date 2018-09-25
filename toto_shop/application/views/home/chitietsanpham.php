@@ -15,12 +15,13 @@
 <div class="container" >
 <div class="content">
 <br>
-<img src="../uploads/<?=$chitietsanpham["hinhanh"]?>" width="333px;" height="500px;">
+<img src="<?php echo base_url() ?>uploads/<?=$chitietsanpham["hinhanh"]?>" width="333px;" height="500px;">
 <div class="left">
   <h3><?=$chitietsanpham["tensp"]?></h3>
+  
   <h6 style="color: #9E9EBF"><?=$chitietsanpham["rating"]?></h6>
   <h3 style="color: #EC5355"><?=$chitietsanpham["gia"]?></h3>
-  <img src="../uploads/<?=$chitietsanpham["hinhanh"]?>" height="100px;"><br>
+  <img src="<?php echo base_url() ?>uploads/<?=$chitietsanpham["hinhanh"]?>" height="100px;"><br>
   <br>
   <h4></b>Số lượng : <input type="number" name="quantity" min="1" max="100" ></h4></b>
   <h4><b>size:
@@ -42,7 +43,7 @@
 </div>
 <div class="container">
 <h2 style="color: #9E9EBF; margin-top: 250px;" >Chi Tiết Sản Phẩm</h2>
-<img src="http://cdn.nhanh.vn/cdn/store/7136/psCT/20180802/8466611/THUN_NAM_088002BL_(thun_nam_2_(2)).jpg" width="800px;"></div>
+<img src="<?php echo base_url() ?>uploads/<?=$chitiet["image"]?>" width="800px;"></div>
 <br>
   <section class="main-container">
     <div class="container">
@@ -60,7 +61,7 @@
                     <div class="item">
                       <div class="item-inner">
                         <div class="item-img">
-                          <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="product-detail.html"> <img alt="Product tilte is here" src="../uploads/<?=$value['hinhanh']?>"> </a>
+                          <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="product-detail.html"> <img alt="Product tilte is here" src="<?php echo base_url() ?>uploads/<?=$value["hinhanh"]?>"> </a>
                             <div class="new-label new-top-left">new</div>
                             <div class="mask-shop-white"></div>
                             <a class="quickview-btn" href="quick-view.html"><span>Quick View</span></a> <a href="wishlist.html">

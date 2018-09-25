@@ -16,6 +16,14 @@
 			// print_r($rs);
 
 		}
+		public function get_hinhanh1() {
+			$this->db->select("*");
+			//$this->db->where("id_contact>=",$number);
+			$rs = $this->db->get("list_image");
+			return $rs->result_array();
+			// print_r($rs);
+
+		}
 		public function get_anhchitietsanpham() {
 			$this->db->select("*");
 			$chitiet = $this->db->get("list_image",1,4);

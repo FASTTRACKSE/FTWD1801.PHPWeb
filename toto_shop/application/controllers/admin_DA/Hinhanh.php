@@ -51,9 +51,11 @@
           		$uploadData = $this->upload->data();
           		$image = $uploadData['file_name'];
         		$tensanpham = $this->input->post('tensanpham');
+        		$id_sp = $this->input->post('id_sp');
 				$data=array(
 					'image'=>$image,
-					'tensanpham'=>$tensanpham
+					'tensanpham'=>$tensanpham,
+					'id_sp'=>$id_sp
 					);
 				$rs=$this->Hinhanh_model->edit($data,$id);
 			if($rs) {
@@ -83,9 +85,11 @@
           		$uploadData = $this->upload->data();
           		$image = $uploadData['file_name'];
         		$tensanpham = $this->input->post('tensanpham');
+        		$id_sp = $this->input->post('id_sp');
 				$data=array(
 					'image'=>$image,
-					'tensanpham'=>$tensanpham
+					'tensanpham'=>$tensanpham,
+					'id_sp'=>$id_sp
 					);
 				$rs=$this->Hinhanh_model->add($data);
 				if($rs) {
