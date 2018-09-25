@@ -26,9 +26,12 @@
                 <div role="tabpanel" class="tab-pane  fade in active" id="checkout"> 
                   <!-- Checkout are start-->
                   <div class="checkout-area">
+
                     <div class="">
                       <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
+                          <?php echo validation_errors(); ?>
+                          <form action="" method="post" class="form-horizontal form-material">
                           <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-6">
                               <div class="input-box">
@@ -45,11 +48,16 @@
                               </div>
                               <div class="input-box">
                                 <label>Hình Thức Thanh Toán<em>*</em></label>
-                                <select class="select-custom" data-live-search="true" name="hinhthucthanhtoan">
+                                <select class="select-custom" data-live-search="true" name="hinhthucgiaohang">
                                   <option value="1">Giao Hàng Tận Nơi</option>
                                   <option value="2">Nhận Hàng Tại Shop</option>
                                 </select>
                               </div>
+                              <!-- <div class="input-box">
+                                <label>Hình Thức Thanh Toán<em>*</em></label>
+                                <input type="radio" name="thanhtoan" value="1">Giao Hàng Tận Nơi
+                                <input type="radio" name="thanhtoan" value="1">
+                              </div> -->
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                               <div class="input-box">
@@ -64,8 +72,14 @@
                                 <label>Tỉnh/Thành Phố<em>*</em></label>
                                 <input type="text" name="tinhthanhpho" class="info">
                               </div>
+                              <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
                             </div>
                           </div>
+                          </form>
                         </div>
                       </div>
                     </div>

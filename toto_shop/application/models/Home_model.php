@@ -20,6 +20,17 @@ class Home_model extends CI_Model {
 		return $this->db->get('sanpham')->row();
 	}
 
+	public function allCheckOut()
+	{
+		$query=$this->db->get('thongtinkhachhang');
+		return $query->result_array();
+	}
+
+	public function addCheckOut($id)
+	{
+		return $this->db->insert('thongtinkhachhang',$id);
+	}
+
 }
 
 /* End of file  */

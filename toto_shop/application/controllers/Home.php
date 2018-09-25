@@ -525,10 +525,43 @@ class Home extends CI_Controller {
 		$this->load->view("templates/frontend/master",$data);
 	}
 
-	public function checkout()
-	{
-		$data['content']="home/checkout";
-		$this->load->view("templates/frontend/master",$data);
+	// public function checkout()
+	// {	
+	// 	$data["item"]= $this->Home_model->allCheckOut();
+	// 	$data['content']="admin_DA/checkout/index_checkout";
+	// 	$this->load->view("templates/frontend/master",$data);
+	// }
+
+	public function addCheckOut()
+	{	
+		
+		$data['content']='home/checkout';
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('hovaten', 'Name', 'required');
+		if ($this->form_validation->run() == FALSE)
+		{
+			$this->load->view('templates/frontend/master',$data);
+		}
+		else
+		{
+			$add = array(
+				'hovaten'=>$this->input->post('hovaten'),
+				'sodienthoai' => $this->input->post('sodienthoai'),
+				'diachi'=>$this->input->post('diachi'),
+				'xaphuong'=>$this->input->post('xaphuong'),
+				'huyenquan'=>$this->input->post('huyenquan'),
+				'tinhthanhpho'=>$this->input->post('tinhthanhpho'),
+				'hinhthucgiaohang'=>$this->input->post('hinhthucgiaohang')
+			);
+
+			$rs= $this->Home_model->addCheckOut($add);
+			echo "thanh cong";
+			// if ($rs) {
+			// 	$this->session->set_flashdata('msg','Thêm Thành Công');
+			// 	redirect('home/checkout');
+			// } else {
+			// 	echo "that bai";
+			// }
+		}
 	}
 }
-	

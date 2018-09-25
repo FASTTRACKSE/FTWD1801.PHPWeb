@@ -92,7 +92,7 @@
                                 <p>Tổng Tiền<span><?php echo $this->cart->format_number($this->cart->total()); ?></span></p>
                               </div>
                               <div class="process-checkout-btn text-right">
-                                <button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><span>Proceed to Checkout</span></button>
+                                <a href="<?=base_url()?>home/addCheckOut"><button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><span>Proceed to Checkout</span></button></a>
                               </div>
                             </div>
                           </div>
