@@ -197,7 +197,7 @@
               </div>
             </div>
           </div>
-          <div class="jtv-trending-products">
+<!--           <div class="jtv-trending-products">
             <div class="slider-items-products">
               <div class="jtv-new-title">
                 <h2>TIN TỨC</h2>
@@ -208,7 +208,7 @@
                   <div class="item">
                     <div class="item-inner">
                       <div class="item-img">
-                        <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="product-detail.html"> <img alt="Product tilte is here" src="uploads/<?=$value["anh"]?>"> </a>
+                        <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="product-detail.html"> <img alt="Product tilte is here" src="uploads/<?=$value["anh"]?>" > </a>
                           <div class="new-label new-top-left">new</div>
                           <div class="mask-shop-white"></div>
                           <div class="new-label new-top-left">new</div>
@@ -239,13 +239,30 @@
                 </div>
               </div>
             </div>
+          </div> -->
+          <div class="jtv-latest-blog">
+            <div class="jtv-new-title">
+              <h2>TIN TỨC</h2>
+            </div>
+            <div class="row">
+              <div class="blog-outer-container">
+                <div class="blog-inner">
+                  <?php foreach ($tintuc as $key => $value) { ?>
+                  <div class="col-xs-12 col-sm-4 blog-preview_item">
+                    <div class="entry-thumb jtv-blog-img-hover"> <a href="blog_single_post.html"> <img alt="Blog" src="uploads/<?=$value["anh"]?>"> </a> </div>
+                    <b><p class="blog-preview_title"><a href="blog_single_post.html"><?=$value["tieude"]?></a></p></b>
+                      <a href="<?=base_url()?>home/tintuc"><p style="text-align: center;">xem thêm >></p></a>
+                  </div>
+                  <<?php } ?>
+                </div>
+              </div>
+            </div>
           </div>
+          <!-- ... -->
         </div>
       </div>
     </div>
   </section>
-  
-  
   <!-- Brand Logo -->
   <div class="container jtv-brand-logo-block">
     <div class="jtv-brand-logo">

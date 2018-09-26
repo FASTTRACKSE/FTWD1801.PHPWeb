@@ -1,7 +1,7 @@
 
 <style type="text/css">
   .left {
-    margin-top: -528px;
+    margin-top: -540px;
     margin-left: 435px;
   }
   .content {
@@ -10,7 +10,22 @@
   .title {
     margin-left: 400px;
   }
+  .chitiet {
+    margin-top: -172px;
+  }
 </style>
+<body>
+  <div id="fb-root">
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+</div>
+<br>
 <h5 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href=""> ÁO THUN </a>/<a href=""> ÁO THUN TAY NGẮN</a></h5>
 <div class="container" >
 <div class="content">
@@ -37,11 +52,13 @@
       <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart">Đặt Hàng</i></span>
       </button>
       </a>
-      </div>
+      </div><br>
+      <div class="fb-comments" data-href="http://localhost/FTWD1801.PHPWeb/toto_shop/home/chitietsanpham" data-width="470" data-numposts="10" ></div>
   </div>
 </div>
 </div>
 <div class="container">
+  <div class="chitiet">
 <h2 style="color: #9E9EBF; margin-top: 250px;" >Chi Tiết Sản Phẩm</h2>
 <img src="<?php echo base_url() ?>uploads/<?=$chitiet["image"]?>" width="800px;"></div>
 <br>
@@ -82,7 +99,10 @@
                               </div>
                               <div class="actions">
                                 <div class="add_cart">
-                                  <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart"></i> Add to Cart</span></button>
+                                <a href="<?=base_url()?>Home/insert/<?php echo $chitietsanpham['id_sp']?>">
+                                <button class="button btn-cart" type="button"><span><i class="fa fa-shopping-cart">Đặt Hàng</i></span>
+                                </button>
+                                </a>
                                 </div>
                               </div>
                             </div>

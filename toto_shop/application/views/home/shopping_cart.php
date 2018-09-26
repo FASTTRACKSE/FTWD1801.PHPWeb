@@ -42,11 +42,11 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <?php 
+                            <!-- <?php 
                               echo "<pre>";
                               var_dump($items);
                               echo "</pre>";
-                             ?>
+                             ?> -->
                              <?php $i = 1; ?>
                             <?php foreach ($items as  $value) { ?>
                             <tr class="cart_item">
