@@ -1,14 +1,12 @@
-
+<style type="text/css">
+  .title {
+    margin-left: 400px;
+  }
+</style>
+<h5 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href="<?=base_url()?>home/Shopping_cart"> GIỎ HÀNG </a> </h5>
   <!-- Breadcrumbs -->
   <div class="breadcrumbs">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <ul>
-            <li class="home"><a href="index.html" title="Go to Home Page">Home</a> <span>/</span></li>
-            <li> <strong>Shopping cart </strong> </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>  
@@ -17,7 +15,7 @@
       <div class="row">
         <div class="col-sm-12 col-xs-12">
           <div class="product-area">
-            <h3>Shoppingcart</h3>
+            <h3>Giỏ hàng của bạn</h3>
             <div class="content-tab-product-category"> 
               <!-- Tab panes -->
               <div class="tab-content">
@@ -32,7 +30,7 @@
                               <th class="product-thumbnail ">Hình ảnh</th>
                               <th class="product-name ">Tên Sản Phẩm</th>
                               <th class="product-size ">Size</th>
-                              <th class="product-rating">Rating</th>
+                              <th class="product-rating">Mã sp</th>
                               <th class="product-price ">Đơn giá</th>
                               <th class="product-quantity">Số lượng</th>
                               <th class="product-subtotal ">Thành Tiền</th>
@@ -86,8 +84,8 @@
                           <div class="col-md-8 col-sm-7 col-xs-12">
                             <div class="update-coupne-area">
                               <div class="update-continue-btn text-right">
-                                <a href="<?=base_url()?>Home"><button class="button btn-continue" title="Continue Shopping" type="button"><span>Continue Shopping</span></button></a>
-                                <input class="button btn-update" title="Update Cart" value="Update Cart" name="update_cart_action" type="submit"> 
+                                <a href="<?=base_url()?>Home"><button class="button btn-continue" title="Continue Shopping" type="button"><span>Mua sản phẩm khác</span></button></a>
+                                <input class="button btn-update" title="Update Cart" value="Cập nhật giỏ hàng" name="update_cart_action" type="submit"> 
                               </div>
                             </div>
                           </div>
@@ -97,7 +95,7 @@
                                 <p>Tổng Tiền<span><?php echo $this->cart->format_number($this->cart->total()); ?></span></p>
                               </div>
                               <div class="process-checkout-btn text-right">
-                                <a href="<?=base_url()?>home/addCheckOut"><button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><span>Proceed to Checkout</span></button></a>
+                                <a href="<?=base_url()?>home/addCheckOut"><button class="button btn-proceed-checkout" title="Proceed to Checkout" type="button"><span>Tiến hành thanh toán</span></button></a>
                               </div>
                             </div>
                           </div>

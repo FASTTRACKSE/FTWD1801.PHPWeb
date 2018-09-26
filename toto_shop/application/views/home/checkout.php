@@ -1,14 +1,17 @@
-
+<style type="text/css">
+  .title {
+    margin-left: 400px;
+  }
+  .btn1 {
+    background-color: #E7E7E7;
+    border:  solid #E7E7E7;
+    width: 1140px;
+  }
+</style>
+<h5 class="title"><a href="<?=base_url()?>home"> TRANG CHỦ</a> / <a href="<?=base_url()?>home/checkout"> THANH TOÁN </a></h5>
   <!-- Breadcrumbs -->
   <div class="breadcrumbs">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <ul>
-            <li class="home"> <a href="index.html" title="Go to Home Page">Home</a> <span>/</span></li>
-            <li> <strong>Checkout</strong> </li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -19,7 +22,9 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="product-area">
-            <h3>CHECKOUT</h3>
+            <h3 style="color: #F82E56;">Thanh toán đơn hàng</h3>
+            <br>
+            <button class="btn1"><h5 style="float: left;">Thông tin khách hàng</h5></button>
             <div class="content-tab-product-category"> 
               <!-- Tab panes -->
               <div class="tab-content">
@@ -74,7 +79,7 @@
                               </div>
                               <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button class="btn btn-success">Add</button>
+                                        <a href="<?=base_url()?>home/checkoutthanhcong"><button class="btn btn-success">Xác nhận</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -88,140 +93,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="jtv-crosssel-pro">
-        <div class="jtv-new-title">
-          <h2>you may be interested</h2>
-        </div>
-        <div class="category-products">
-          <ul class="products-grid">
-            <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-              <div class="item-inner">
-                <div class="item-img">
-                  <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="#"> <img alt="Product tilte is here" src="images/products/product-fashion-1.jpg"> </a>
-                    <div class="new-label new-top-left">new</div>
-                    <div class="sale-label sale-top-right">sale</div>
-                    <div class="mask-shop-white"></div>
-                    <div class="new-label new-top-left">new</div>
-                    <a class="quickview-btn" href="quick-view.html"><span>Quick View</span></a> <a href="wishlist.html">
-                    <div class="mask-left-shop"><i class="fa fa-heart"></i></div>
-                    </a> <a href="compare.html">
-                    <div class="mask-right-shop"><i class="fa fa-signal"></i></div>
-                    </a> </div>
-                </div>
-                <div class="item-info">
-                  <div class="info-inner">
-                    <div class="item-title"> <a title="Product tilte is here" href="#">Product tilte is here </a> </div>
-                    <div class="item-content">
-                      <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                      <div class="item-price">
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$75.00</span></span></div>
-                      </div>
-                      <div class="actions"><a href="#" class="link-wishlist" title="Add to Wishlist"></a>
-                        <div class="add_cart">
-                          <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                        </div>
-                        <a href="#" class="link-compare" title="Add to Compare"></a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-              <div class="item-inner">
-                <div class="item-img">
-                  <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="#"> <img alt="Product tilte is here" src="images/products/product-fashion-1.jpg"> </a>
-                    <div class="mask-shop-white"></div>
-                    <div class="new-label new-top-left">new</div>
-                    <a class="quickview-btn" href="quick-view.html"><span>Quick View</span></a> <a href="wishlist.html">
-                    <div class="mask-left-shop"><i class="fa fa-heart"></i></div>
-                    </a> <a href="compare.html">
-                    <div class="mask-right-shop"><i class="fa fa-signal"></i></div>
-                    </a> </div>
-                </div>
-                <div class="item-info">
-                  <div class="info-inner">
-                    <div class="item-title"> <a title="Product tilte is here" href="#">Product tilte is here </a> </div>
-                    <div class="item-content">
-                      <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                      <div class="item-price">
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$88.99</span></span></div>
-                      </div>
-                      <div class="actions"><a href="#" class="link-wishlist" title="Add to Wishlist"></a>
-                        <div class="add_cart">
-                          <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                        </div>
-                        <a href="#" class="link-compare" title="Add to Compare"></a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-              <div class="item-inner">
-                <div class="item-img">
-                  <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="#"> <img alt="Product tilte is here" src="images/products/product-fashion-1.jpg"> </a>
-                    <div class="mask-shop-white"></div>
-                    <div class="new-label new-top-left">new</div>
-                    <a class="quickview-btn" href="quick-view.html"><span>Quick View</span></a> <a href="wishlist.html">
-                    <div class="mask-left-shop"><i class="fa fa-heart"></i></div>
-                    </a> <a href="compare.html">
-                    <div class="mask-right-shop"><i class="fa fa-signal"></i></div>
-                    </a> </div>
-                </div>
-                <div class="item-info">
-                  <div class="info-inner">
-                    <div class="item-title"> <a title="Product tilte is here" href="#">Product tilte is here </a> </div>
-                    <div class="item-content">
-                      <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                      <div class="item-price">
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$149.00</span></span></div>
-                      </div>
-                      <div class="actions"><a href="#" class="link-wishlist" title="Add to Wishlist"></a>
-                        <div class="add_cart">
-                          <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                        </div>
-                        <a href="#" class="link-compare" title="Add to Compare"></a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="item col-lg-3 col-md-3 col-sm-4 col-xs-6">
-              <div class="item-inner">
-                <div class="item-img">
-                  <div class="item-img-info"><a class="product-image" title="Product tilte is here" href="#"> <img alt="Product tilte is here" src="images/products/product-fashion-1.jpg"> </a>
-                    <div class="sale-label sale-top-left">sale</div>
-                    <div class="mask-shop-white"></div>
-                    <div class="new-label new-top-left">new</div>
-                    <a class="quickview-btn" href="quick-view.html"><span>Quick View</span></a> <a href="wishlist.html">
-                    <div class="mask-left-shop"><i class="fa fa-heart"></i></div>
-                    </a> <a href="compare.html">
-                    <div class="mask-right-shop"><i class="fa fa-signal"></i></div>
-                    </a> </div>
-                </div>
-                <div class="item-info">
-                  <div class="info-inner">
-                    <div class="item-title"> <a title="Product tilte is here" href="#">Product tilte is here </a> </div>
-                    <div class="item-content">
-                      <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                      <div class="item-price">
-                        <div class="price-box"> <span class="regular-price"> <span class="price">$139.55</span></span></div>
-                      </div>
-                      <div class="actions"><a href="#" class="link-wishlist" title="Add to Wishlist"></a>
-                        <div class="add_cart">
-                          <button class="button btn-cart" type="button"><span>Add to Cart</span></button>
-                        </div>
-                        <a href="#" class="link-compare" title="Add to Compare"></a> </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
