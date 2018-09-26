@@ -524,6 +524,8 @@ class Home extends CI_Controller {
 
 	public function updateCart()
 	{
+		$rs=$this->Sanpham_model->get_sanphamquantam();
+		$data["sanphamquantam"]=$rs;
 		$i = 1;
 
 		foreach ($this->cart->contents() as $item) 
@@ -531,7 +533,7 @@ class Home extends CI_Controller {
 			$this->cart->update(array(
 				'rowid' => $item['rowid'], 
 				'qty' => $_POST['qty'.$i],
-				 'size' => $_POST['option']['size'])
+				 'size' => $_POST['size'])
 		);
 			$i++;
 		}
