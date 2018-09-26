@@ -1,3 +1,4 @@
+
 <style type="text/css">
   .title {
     margin-left: 400px;
@@ -29,7 +30,7 @@
                             <tr>
                               <th class="product-thumbnail ">Hình ảnh</th>
                               <th class="product-name ">Tên Sản Phẩm</th>
-                              <th class="product-size ">Size</th>
+                              <!-- <th class="product-size ">Size</th> -->
                               <th class="product-rating">Mã sp</th>
                               <th class="product-price ">Đơn giá</th>
                               <th class="product-quantity">Số lượng</th>
@@ -49,14 +50,18 @@
                               <td class="item-img"><img src="../uploads/<?=$value['option']['img'] ?>"></td>
                               <td class="item-title"><?php echo $value['name'] ?>
                               </td> 
-                              <td class="item-title">
-                                <select name="size">
-                                  <option value="XL" <?php echo  set_select('size', 'XL', TRUE); ?> >XL</option>
-                                  <option value="L" <?php echo  set_select('size', 'L'); ?> >L</option>
-                                  <option value="M" <?php echo  set_select('size', 'M'); ?> >M</option>
-                                  <option value="S" <?php echo  set_select('size', 'S'); ?> >S</option>
-                                </select>
-                              </td>
+                              <!-- <td class="item-title">
+                                <?php 
+                                $size = array(
+                                  'XL'         => 'XL',
+                                  'L'           => 'L',
+                                  'M'         => 'M',
+                                  'S'        => 'S'
+                                );
+                                // $shirts_on_sale = array('small', 'large');
+                                echo form_dropdown('size', $size,'S');
+                                ?>
+                              </td> -->
                               <td class="item-title"><?php echo $value['option']['rating'] ?>
 
                               <td class="item-price"><?php echo $value['price'] ?></td>

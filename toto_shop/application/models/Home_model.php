@@ -42,6 +42,16 @@ class Home_model extends CI_Model {
 		  
 	}
 
+	// public function ds_size()
+	// {
+	// 	$query = $this->db->get('ds_size');
+	// 	$mang_ds = array();
+	// 	foreach ($query->result_array() as $item) {
+	// 		$mang_ds[$item['id_size']] = $item['ten'];
+	// 	}
+	// 	return $mang_ds;
+	// }
+
 }
 
 /* End of file  */

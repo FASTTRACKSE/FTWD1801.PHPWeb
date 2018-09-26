@@ -523,17 +523,20 @@ class Home extends CI_Controller {
     }
 
 	public function updateCart()
-	{
+	{	
+
 		$rs=$this->Sanpham_model->get_sanphamquantam();
 		$data["sanphamquantam"]=$rs;
+		// $data["size"] = $this->Home_model->ds_size();
+
 		$i = 1;
 
 		foreach ($this->cart->contents() as $item) 
 		{
 			$this->cart->update(array(
 				'rowid' => $item['rowid'], 
-				'qty' => $_POST['qty'.$i],
-				 'size' => $_POST['size'])
+				'qty' => $_POST['qty'.$i])
+				// 'size' => $_POST['size'])
 		);
 			$i++;
 		}
@@ -608,4 +611,12 @@ class Home extends CI_Controller {
 			 // echo "thanh cong";
 		}
 	}
+
+	// public function addSize()
+	// {
+	// 	// $this->load->model('Home_model');
+		
+	// 	$data['content']="home/shopping_cart";
+	// 	$this->load->view("templates/frontend/master",$data);
+	// }
 }

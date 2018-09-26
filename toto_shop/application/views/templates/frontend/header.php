@@ -101,16 +101,16 @@
                           <div class="popup">
                             <div class="row">
                               <div class="col-md-12">
-                                <h3><a href="shop-grid-sidebar.html">ÁO THUN NAM</a></h3>
+                                <h3><a href="#">ÁO THUN NAM</a></h3>
                                 <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Áo Thun Tay Ngắn</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Áo Thun Tay Dài</a></li>
+                                  <li><a href="#">Áo Thun Tay Ngắn</a></li>
+                                  <li><a href="#">Áo Thun Tay Dài</a></li>
                                 </ul>
                                 <br>
-                                <h3><a href="shop-grid-sidebar.html">ÁO THUN NỮ</a></h3>
+                                <h3><a href="#">ÁO THUN NỮ</a></h3>
                                 <ul class="nav">
-                                 <li><a href="shop-grid-sidebar.html">Áo Thun Tay Ngắn</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Áo Thun Tay Dài</a></li>
+                                 <li><a href="#">Áo Thun Tay Ngắn</a></li>
+                                  <li><a href="#">Áo Thun Tay Dài</a></li>
                                 </ul>
                               </div>
                             </div>
@@ -123,16 +123,16 @@
                           <div class="popup">
                             <div class="row">
                               <div class="col-md-12">
-                                <h3><a href="shop-grid-sidebar.html">ÁO SƠ MI NAM</a></h3>
+                                <h3><a href="#">ÁO SƠ MI NAM</a></h3>
                                 <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Ngắn</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Dài</a></li>
+                                  <li><a href="#">Sơ Mi Tay Ngắn</a></li>
+                                  <li><a href="#">Sơ Mi Tay Dài</a></li>
                                 </ul>
                                 <br>
-                                <h3><a href="shop-grid-sidebar.html">ÁO SƠ MI NỮ</a></h3>
+                                <h3><a href="#">ÁO SƠ MI NỮ</a></h3>
                                 <ul class="nav">
-                                 <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Ngắn</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Sơ Mi Tay Dài</a></li>
+                                 <li><a href="#">Sơ Mi Tay Ngắn</a></li>
+                                  <li><a href="#">Sơ Mi Tay Dài</a></li>
                                 </ul>
                               </div>
                             </div>
@@ -146,12 +146,12 @@
                               <div class="col-md-12">
                                 <h3><a href="shop-grid-sidebar.html">QUẦN SHORT NAM</a></h3>
                                 <ul class="nav">
-                                  <li><a href="shop-grid-sidebar.html">Short kaki</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Short jean</a></li>
-                                  <li><a href="shop-grid-sidebar.html">Short thun</a></li>
+                                  <li><a href="#">Short kaki</a></li>
+                                  <li><a href="#">Short jean</a></li>
+                                  <li><a href="#">Short thun</a></li>
                                 </ul>
                                 <br>
-                                <h3><a href="shop-grid-sidebar.html">QUẦN SHORT NỮ</a></h3>
+                                <h3><a href="#">QUẦN SHORT NỮ</a></h3>
                               </div>
                             </div>
                           </div>
