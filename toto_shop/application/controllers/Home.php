@@ -587,21 +587,23 @@ class Home extends CI_Controller {
 				$array = array(
 					'id_hd' => $id_hd,
 					'id_sp' => $value['id'],
-					'soluong' => $value['qty'],
-					'id_size'=>$value['option']['size']
+					'soluong' => $value['qty']
+					// 'id_size'=>$value['option']['size']
 
 
 				);
-				$sr = $this->Home_model->addHoaDonChiTiet($array);
-				if ($rs) {
+				$rs = $this->Home_model->addHoaDonChiTiet($array);
+				
+			};
+			$this->cart->destroy();
+			if ($rs) {
 				redirect('home/checkoutthanhcong');
+				$this->cart->destroy();
 				} else {
 				redirect('home/checkout');
-				}
-			};
-			//
-			$this->cart->destroy();
-			// echo "thanh cong";
+			}
+			// $this->cart->destroy();
+			 // echo "thanh cong";
 		}
 	}
 }
