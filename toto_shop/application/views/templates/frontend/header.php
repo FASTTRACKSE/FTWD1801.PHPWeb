@@ -1,3 +1,4 @@
+<?php $this->load->library('cart'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -180,22 +181,7 @@
                   <div class="menu_top">
                     <div class="top-cart-contain pull-right">
                       <div class="mini-cart">
-                        <div class="basket"><a class="basket-icon" href="<?=base_url()?>home/shopping_cart"><i class="fa fa-shopping-basket"></i>Giỏ hàng</a>
-                          <div class="top-cart-content">
-                            <ul class="mini-products-list" id="cart-sidebar">
-                              <li class="item">
-                                <div class="item-inner"><a class="product-image" title="Product tilte is here" href="product-detail.html"><img alt="Product tilte is here" src="<?=base_url()?>assets_frontend/images/products/product-fashion-1.jpg"></a>
-                                  <div class="product-details">
-                                    <div class="access"><a class="btn-remove1" title="Remove This Item" href="#">Remove</a> <a class="btn-edit" title="Edit item" href="#"><i class="fa fa-pencil"></i><span class="hidden">Edit item</span></a> </div>
-                                    <p class="product-name"><a href="product-detail.html">Product tilte is here</a></p>
-                                    <strong>1</strong> x <span class="price">$99.89</span></div>
-                                </div>
-                              </li>
-                            </ul>
-                            <div class="actions"> <a href="shopping-cart.html" class="view-cart"><span>View Cart</span></a>
-                              <button onclick="window.location.href='checkout.html'" class="btn-checkout" title="Checkout" type="button"><span>Checkout</span></button>
-                            </div>
-                          </div>
+                        <div class="basket"><a class="basket-icon" href="<?=base_url()?>home/shopping_cart"><i class="fa fa-shopping-basket"></i>Giỏ hàng <span>(<?= $this->cart->total_items() ?>)</span></a>
                         </div>
                       </div>
                     </div>
