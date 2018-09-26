@@ -52,16 +52,17 @@
                             <tr class="cart_item">
                               <td class="item-img"><img src="../uploads/<?=$value['option']['img'] ?>"></td>
                               <td class="item-title"><?php echo $value['name'] ?>
-                              </td>
-                              <td class="item-title"><select>
-                                  <option name='size' value="XL">XL</option>
-                                  <option name='size'  value="L">L</option>
-                                  <option name='size' value="M">M</option>
-                                  <option name='size' value="S">S</option>
+                              </td> 
+                              <td class="item-title">
+                                <select name="size">
+                                  <option value="XL" <?php echo  set_select('size', 'XL', TRUE); ?> >XL</option>
+                                  <option value="L" <?php echo  set_select('size', 'L'); ?> >L</option>
+                                  <option value="M" <?php echo  set_select('size', 'M'); ?> >M</option>
+                                  <option value="S" <?php echo  set_select('size', 'S'); ?> >S</option>
                                 </select>
                               </td>
                               <td class="item-title"><?php echo $value['option']['rating'] ?>
-                              </td>
+
                               <td class="item-price"><?php echo $value['price'] ?></td>
                               <td class="item-qty"><div class="cart-quantity">
                                   <div class="product-qty">

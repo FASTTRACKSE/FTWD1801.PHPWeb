@@ -511,12 +511,6 @@ class Home extends CI_Controller {
 		redirect('Home/shopping_cart');
     }
 
-    public function deleteAll()
-	{
-		$this->cart->destroy();
-		
-	}
-
 	public function updateCart()
 	{
 		$i = 1;
@@ -526,7 +520,7 @@ class Home extends CI_Controller {
 			$this->cart->update(array(
 				'rowid' => $item['rowid'], 
 				'qty' => $_POST['qty'.$i],
-				 'size' => $_POST['option'.$i]['size'])
+				 'size' => $_POST['option']['size'])
 		);
 			$i++;
 		}

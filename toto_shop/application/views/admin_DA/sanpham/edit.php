@@ -44,19 +44,19 @@
                             <label for="vat" class=" form-control-label" >size</label>
                             <div>
                                 <select name="size">
-                                                <?php
-                                                    $stt_true=$stt_false="";
-                                                    if($item['size']==S){
-                                                    $stt_true="selected";
-                                                    }else{
-                                                    $stt_false="selected";
-                                                }
-                                                ?>
-                                                <option <?php echo $stt_true?> value="S">S</option>
-                                                <option <?php echo $stt_false?> value="M">M</option> 
-                                                <option <?php echo $stt_false?> value="L">L</option> 
-                                                <option <?php echo $stt_false?> value="XL">XL</option> 
-                                                </select>
+                                    <?php
+                                        $stt_true=$stt_false="";
+                                        if($item['size']==S){
+                                        $stt_true="selected";
+                                        }else{
+                                        $stt_false="selected";
+                                    }
+                                    ?>
+                                    <option <?php echo $stt_true?> value="S">S</option>
+                                    <option <?php echo $stt_false?> value="M">M</option> 
+                                    <option <?php echo $stt_false?> value="L">L</option> 
+                                    <option <?php echo $stt_false?> value="XL">XL</option> 
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
