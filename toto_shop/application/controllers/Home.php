@@ -510,9 +510,9 @@ class Home extends CI_Controller {
 			// var_dump($this->cart->insert($data));
 			// echo "<pre>";
 		 if($this->cart->insert($data)){
-             redirect('Home/shopping_cart');
+             redirect('http://localhost/FTWD1801.PHPWeb/toto_shop/Home');
         }else{
-            redirect('Home/index');
+            redirect('Home');
         }
 	}
 
@@ -540,19 +540,23 @@ class Home extends CI_Controller {
 		$this->load->view("templates/frontend/master",$data);
 	}
 
-	// public function checkout()
-	// {	
-	// 	$data["item"]= $this->Home_model->allCheckOut();
-	// 	$data['content']="admin_DA/checkout/index_checkout";
-	// 	$this->load->view("templates/frontend/master",$data);
-	// }
+	public function checkoutthanhcong()
+	{	
+		$data['content']="home/checkoutthanhcong";
+		$this->load->view("templates/frontend/master",$data);
+	}
 
 	public function addCheckOut()
 	{	
 		
 		$data['content']='home/checkout';
 		$this->load->library('form_validation');
-		$this->form_validation->set_rules('hovaten', 'Name', 'required');
+		$this->form_validation->set_rules('hovaten', 'Họ Và Tên', 'required');
+		$this->form_validation->set_rules('sodienthoai', 'Số Điện Thoại', 'required');
+		$this->form_validation->set_rules('diachi', 'Địa Chỉ', 'required');
+		$this->form_validation->set_rules('xaphuong', 'Xã/Phường', 'required');
+		$this->form_validation->set_rules('huyenquan', 'Huyện/Quận', 'required');
+		$this->form_validation->set_rules('tinhthanhpho', 'Tỉnh/Thành Phố', 'required');
 		if ($this->form_validation->run() == FALSE)
 		{
 			$this->load->view('templates/frontend/master',$data);
@@ -588,17 +592,16 @@ class Home extends CI_Controller {
 
 
 				);
-				$this->Home_model->addHoaDonChiTiet($array);
+				$sr = $this->Home_model->addHoaDonChiTiet($array);
+				if ($rs) {
+				redirect('home/checkoutthanhcong');
+				} else {
+				redirect('home/checkout');
+				}
 			};
 			//
 			$this->cart->destroy();
-			echo "thanh cong";
-			// if ($rs) {
-			// 	$this->session->set_flashdata('msg','Thêm Thành Công');
-			// 	redirect('home/checkout');
-			// } else {
-			// 	echo "that bai";
-			// }
+			// echo "thanh cong";
 		}
 	}
 }

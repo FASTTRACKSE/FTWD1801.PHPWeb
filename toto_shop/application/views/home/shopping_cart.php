@@ -11,9 +11,7 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Breadcrumbs End -->
-  
+  </div>  
   <section class="main-container col1-layout">
     <div class="main container">
       <div class="row">
@@ -89,16 +87,12 @@
                             <div class="update-coupne-area">
                               <div class="update-continue-btn text-right">
                                 <a href="<?=base_url()?>Home"><button class="button btn-continue" title="Continue Shopping" type="button"><span>Continue Shopping</span></button></a>
-                                <!-- <a href="<?=base_url()?>Home/deleteAll"><button class="button btn-empty" title="Clear Cart" value="empty_cart" name="update_cart_action" type="submit"><span>Clear Cart</span></button></a> -->
                                 <input class="button btn-update" title="Update Cart" value="Update Cart" name="update_cart_action" type="submit"> 
                               </div>
                             </div>
                           </div>
                           <div class="col-md-4 col-sm-5 col-xs-12">
                             <div class="cart-total-area">
-                              <!-- <div class="catagory-title cat-tit-5 text-right">
-                                <h3>Tổng tiền trong giỏ hàng</h3>
-                              </div> -->
                               <div class="process-cart-total">
                                 <p>Tổng Tiền<span><?php echo $this->cart->format_number($this->cart->total()); ?></span></p>
                               </div>
@@ -111,7 +105,6 @@
                       </div>
                     </form>
                   </div>
-                  <!-- cart are end--> 
                 </div>
               </div>
             </div>

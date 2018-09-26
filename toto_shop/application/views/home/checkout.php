@@ -227,5 +227,5 @@
     </div>
   </div>
   <!--End main-container --> 
- <!--  $data['total_items'] = $this->cart->total_items();
+ <!-- $data['total_items'] = $this->cart->total_items();
   $this- -->

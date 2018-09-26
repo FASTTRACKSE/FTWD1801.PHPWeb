@@ -16,7 +16,6 @@
             <div class="toolbar">
               <div class="sorter">
               </div>
-               
             </div>
             <div class="category-products">
               <ul class="products-grid">
