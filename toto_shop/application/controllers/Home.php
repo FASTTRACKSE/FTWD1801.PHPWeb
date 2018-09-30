@@ -518,6 +518,8 @@ class Home extends CI_Controller {
 
 	public function delete($rowid)
     {	
+  //   	$rs=$this->Sanpham_model->get_sanphamquantam();
+		// $data["sanphamquantam"]=$rs;
     	$this->cart->update(array('rowid' => $rowid, 'qty' => 0));
 		redirect('Home/shopping_cart');
     }
