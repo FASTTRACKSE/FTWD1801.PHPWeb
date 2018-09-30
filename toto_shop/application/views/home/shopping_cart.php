@@ -30,7 +30,7 @@
                             <tr>
                               <th class="product-thumbnail ">Hình ảnh</th>
                               <th class="product-name ">Tên Sản Phẩm</th>
-                              <!-- <th class="product-size ">Size</th> -->
+                              <th class="product-size ">Size</th>
                               <th class="product-rating">Mã sp</th>
                               <th class="product-price ">Đơn giá</th>
                               <th class="product-quantity">Số lượng</th>
@@ -50,7 +50,7 @@
                               <td class="item-img"><img src="../uploads/<?=$value['option']['img'] ?>"></td>
                               <td class="item-title"><?php echo $value['name'] ?>
                               </td> 
-                              <!-- <td class="item-title">
+                              <td class="item-title">
                                 <?php 
                                 $size = array(
                                   'XL'         => 'XL',
@@ -61,7 +61,8 @@
                                 // $shirts_on_sale = array('small', 'large');
                                 echo form_dropdown('size', $size,'S');
                                 ?>
-                              </td> -->
+                              </td> 
+                              
                               <td class="item-title"><?php echo $value['option']['rating'] ?>
 
                               <td class="item-price"><?php echo $value['price'] ?></td>

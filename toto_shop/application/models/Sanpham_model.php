@@ -50,20 +50,20 @@
 			$rs=$this->db->get("sanpham");
 			return $rs->result_array();
 		}
-		public function get_do_nam_duoi_100k() {
-			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
-			// $this->db->where("gioitinh","nam");
-			$this->db->or_where("gia < 100");
-			$rs=$this->db->get("sanpham");
-			return $rs->result_array();
-		}
-		public function get_do_nam_tu_100k_300k() {
-			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
-			// $this->db->where("gioitinh","nam");
-			$this->db->or_where("gia < 300");
-			$rs=$this->db->get("sanpham");
-			return $rs->result_array();
-		}
+		// public function get_do_nam_duoi_100k() {
+		// 	$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
+		// 	// $this->db->where("gioitinh","nam");
+		// 	$this->db->or_where("gia < 100");
+		// 	$rs=$this->db->get("sanpham");
+		// 	return $rs->result_array();
+		// }
+		// public function get_do_nam_tu_100k_300k() {
+		// 	$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
+		// 	// $this->db->where("gioitinh","nam");
+		// 	$this->db->or_where("gia < 300");
+		// 	$rs=$this->db->get("sanpham");
+		// 	return $rs->result_array();
+		// }
 		public function get_donu() {
 			$this->db->join('loai_sp', 'sanpham.loai_sp=loai_sp.id', 'inner');
 			$this->db->where("gioitinh","nu");
