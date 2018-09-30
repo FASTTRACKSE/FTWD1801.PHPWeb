@@ -520,6 +520,8 @@ class Home extends CI_Controller {
     {	
     	$this->cart->update(array('rowid' => $rowid, 'qty' => 0));
 		redirect('Home/shopping_cart');
+		// $this->load->view("templates/frontend/master",$data);
+
     }
 
 	public function updateCart()
@@ -600,7 +602,7 @@ class Home extends CI_Controller {
 				$rs = $this->Home_model->addHoaDonChiTiet($array);
 				
 			};
-			$this->cart->destroy();
+			// $this->cart->destroy();
 			if ($rs) {
 				redirect('home/checkoutthanhcong');
 				$this->cart->destroy();
