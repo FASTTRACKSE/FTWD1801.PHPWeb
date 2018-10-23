@@ -56,11 +56,11 @@
       <div class="fb-comments" data-href="http://localhost/FTWD1801.PHPWeb/toto_shop/home/chitietsanpham" data-width="470" data-numposts="10" ></div>
   </div>
 </div>
-</div>
+</div><!-- <?php echo base_url()?>uploads/<?=$chitiet["image"]?> -->
 <div class="container">
   <div class="chitiet">
 <h2 style="color: #9E9EBF; margin-top: 250px;" >Chi Tiết Sản Phẩm</h2>
-<img src="<?php echo base_url() ?>uploads/<?=$chitiet["image"]?>" width="800px;"></div>
+<img src="<?php echo base_url() ?>uploads/<?=$chitiet["image"]?>"> "></div>
 <br>
   <section class="main-container">
     <div class="container">

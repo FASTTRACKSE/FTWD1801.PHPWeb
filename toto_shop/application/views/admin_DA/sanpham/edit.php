@@ -46,16 +46,16 @@
                                 <select name="size">
                                     <?php
                                         $stt_true=$stt_false="";
-                                        if($item['size']==S){
+                                        if($item['size']==1){
                                         $stt_true="selected";
                                         }else{
                                         $stt_false="selected";
                                     }
                                     ?>
-                                    <option <?php echo $stt_true?> value="S">S</option>
-                                    <option <?php echo $stt_false?> value="M">M</option> 
-                                    <option <?php echo $stt_false?> value="L">L</option> 
-                                    <option <?php echo $stt_false?> value="XL">XL</option> 
+                                    <option <?php echo $stt_true?> value="1">S</option>
+                                    <option <?php echo $stt_false?> value="2">M</option> 
+                                    <option <?php echo $stt_false?> value="3">L</option> 
+                                    <option <?php echo $stt_false?> value="4">XL</option> 
                                 </select>
                             </div>
                         </div>

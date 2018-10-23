@@ -37,10 +37,10 @@
                         <div class="form-group">
                             <label for="country" class=" form-control-label">size</label>
                             <select type="text" id="country" placeholder="size" class="form-control" name="size">
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                                <option value="4">XL</option>
                             </select>
                       </div>
                         <div class="form-group">
